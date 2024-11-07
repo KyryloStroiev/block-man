@@ -15,7 +15,6 @@ namespace Code.Gameplay.Features.Block.Factory
         {
             _identifiers = identifiers;
             _staticDataService = staticDataService;
-            Debug.Log("3");
         }
 
         public GameEntity CreateBlock(BlockTypeId typeId, Vector3 at)
