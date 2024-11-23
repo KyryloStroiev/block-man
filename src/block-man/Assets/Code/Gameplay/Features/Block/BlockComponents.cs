@@ -14,9 +14,11 @@ namespace Code.Gameplay.Features.Block
 
     [Game] public class ChangingLayer: IComponent {public LayerMask Value; }
 
+    [Game] public class BlockColliding: IComponent { }
     [Game] public class SpawnReady: IComponent { }
 
     [Game] public class SpawnTimer: IComponent {public float Value; }
+    [Game] public class SpawnsdTimer: IComponent {public float Value; }
 
     [Game] public class SpawnTimerInterval: IComponent {public float Value; }
 }

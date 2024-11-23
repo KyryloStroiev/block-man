@@ -11,7 +11,7 @@ namespace Code.Gameplay.Features.Block.Systems
         private readonly IPhysicsService _physicsService;
         private readonly IGroup<GameEntity> _blocks;
         private List<GameEntity> _buffer = new(8);
-        private readonly IGroup<GameEntity> _crosshair;
+        private readonly IGroup<GameEntity> _crosshairs;
 
         public CheckAnotherBlockSystem(GameContext game, IPhysicsService physicsService)
         {
@@ -22,57 +22,54 @@ namespace Code.Gameplay.Features.Block.Systems
                     GameMatcher.RadiusGroundCheck,
                     GameMatcher.Block, 
                     GameMatcher.TargetLayerMask));
-            _crosshair = game.GetGroup(GameMatcher.Shoot);
+            _crosshairs = game.GetGroup(GameMatcher.Shoot);
         }
 
         public void Execute()
         {
-            bool isShooting = false;
+            foreach (GameEntity crosshair in _crosshairs)
+            foreach (GameEntity block in _blocks.GetEntities(_buffer))
+            foreach (GameObject cube in block.Cube)
+            {
+                if (OverlapCircle(block, cube.transform) > 0)
+                {
+                    
+                }
+            }
             
+            /*bool isShooting = IsShooting();
+            
+            foreach (GameEntity entity in _blocks.GetEntities(_buffer))
+            {
+                ProcessEntity(entity, isShooting);
+            }*/
+        }
+
+        /*private void ProcessEntity(GameEntity entity, bool isShooting)
+        {
+            if (isShooting && HasOverlap(entity))
+                entity.ReplaceVerticalDirection(0);
+            else
+                entity.ReplaceVerticalDirection(-1);
+        }
+        private bool HasOverlap(GameEntity block)
+        {
+            foreach (GameObject cube in block.Cube)
+            {
+                if (OverlapCircle(block, cube.transform) > 0)
+                    return true;
+            }
+            return false;
+        }
+        private bool IsShooting()
+        {
             foreach (GameEntity crosshair in _crosshair)
             {
                 if (crosshair.isShoot)
-                {
-                    isShooting = true;
-                    break;
-                }
+                    return true;
             }
-            
-            if (isShooting)
-            {
-                foreach (GameEntity entity in _blocks.GetEntities(_buffer))
-                {
-                    List<GameObject> cubes = entity.Cube;
-
-                    bool hasCollision = false;
-
-                    for (int i = 0; i < cubes.Count; i++)
-                    {
-                        if (OverlapCircle(entity, cubes[i].transform) > 0)
-                        {
-                            hasCollision = true;
-                            break;
-                        }
-                    }
-
-                    if (hasCollision)
-                    {
-                        entity.ReplaceVerticalDirection(0); 
-                    }
-                    else
-                    {
-                        entity.ReplaceVerticalDirection(-1);
-                    }
-                }
-            }
-            else
-            {
-                foreach (GameEntity entity in _blocks.GetEntities(_buffer))
-                {
-                    entity.ReplaceVerticalDirection(-1); 
-                }
-            }
-        } 
+            return false;
+        }*/
 
         private int OverlapCircle(GameEntity entity, Transform childBlock)
         {
