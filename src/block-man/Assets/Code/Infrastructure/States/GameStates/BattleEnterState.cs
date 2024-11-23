@@ -1,9 +1,6 @@
-﻿using Code.Gameplay.Features.Block.Factory;
-using Code.Gameplay.Features.Hero.Factory;
+﻿using Code.Gameplay.Features.Hero.Factory;
 using Code.Gameplay.Levels;
 using Code.Infrastructure.States.StateMachine;
-using Unity.VisualScripting;
-using UnityEngine;
 using IState = Code.Infrastructure.States.StateInfrastructure.IState;
 
 namespace Code.Infrastructure.States.GameStates

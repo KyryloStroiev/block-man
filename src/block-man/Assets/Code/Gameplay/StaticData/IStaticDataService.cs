@@ -8,6 +8,5 @@ namespace Code.Gameplay.StaticData
         void LoadAll();
         HeroConfig GetHeroConfig();
         BlockConfig GetBlockConfig();
-        BlockConfigPrefab GetBlockPrefab(BlockTypeId blockId);
     }
 }

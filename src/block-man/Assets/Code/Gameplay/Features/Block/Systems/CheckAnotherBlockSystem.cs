@@ -11,6 +11,7 @@ namespace Code.Gameplay.Features.Block.Systems
         private readonly IPhysicsService _physicsService;
         private readonly IGroup<GameEntity> _blocks;
         private List<GameEntity> _buffer = new(8);
+        private readonly IGroup<GameEntity> _crosshair;
 
         public CheckAnotherBlockSystem(GameContext game, IPhysicsService physicsService)
         {
@@ -19,36 +20,64 @@ namespace Code.Gameplay.Features.Block.Systems
                 .AllOf(
                     GameMatcher.Transform,
                     GameMatcher.RadiusGroundCheck,
-                    GameMatcher.GroundLayerMask, 
                     GameMatcher.Block, 
-                    GameMatcher.Cube,
                     GameMatcher.TargetLayerMask));
+            _crosshair = game.GetGroup(GameMatcher.Shoot);
         }
 
         public void Execute()
         {
-            foreach (GameEntity entity in _blocks.GetEntities(_buffer))
+            bool isShooting = false;
+            
+            foreach (GameEntity crosshair in _crosshair)
             {
-                List<GameObject> cubes = entity.Cube;
-
-                for (int i = 0; i < cubes.Count; i++)
+                if (crosshair.isShoot)
                 {
-                    if (OverlapCircle(entity, cubes[i].transform) > 0)
+                    isShooting = true;
+                    break;
+                }
+            }
+            
+            if (isShooting)
+            {
+                foreach (GameEntity entity in _blocks.GetEntities(_buffer))
+                {
+                    List<GameObject> cubes = entity.Cube;
+
+                    bool hasCollision = false;
+
+                    for (int i = 0; i < cubes.Count; i++)
                     {
-                        Debug.Log(1);
+                        if (OverlapCircle(entity, cubes[i].transform) > 0)
+                        {
+                            hasCollision = true;
+                            break;
+                        }
+                    }
+
+                    if (hasCollision)
+                    {
+                        entity.ReplaceVerticalDirection(0); 
                     }
                     else
                     {
-                        Debug.Log(0);
+                        entity.ReplaceVerticalDirection(-1);
                     }
+                }
+            }
+            else
+            {
+                foreach (GameEntity entity in _blocks.GetEntities(_buffer))
+                {
+                    entity.ReplaceVerticalDirection(-1); 
                 }
             }
         } 
 
         private int OverlapCircle(GameEntity entity, Transform childBlock)
         {
-            return _physicsService.CircleCastGround(childBlock.position, entity.CircleOffsetY, entity.RadiusGroundCheck,
-                entity.TargetLayerMask);
+            return _physicsService.CircleCastCube(childBlock.position, entity.CircleOffsetY, entity.RadiusGroundCheck,
+                entity.TargetLayerMask, entity.Transform.gameObject);
         }
     }
 }

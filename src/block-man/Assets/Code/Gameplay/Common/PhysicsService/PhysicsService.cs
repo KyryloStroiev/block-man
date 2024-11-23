@@ -24,6 +24,25 @@ namespace Code.Gameplay.Common.PhysicsService
             
             
         }
+        public int CircleCastCube(Vector3 position, float circleOffsetY, float circleRadius, int layerMask, GameObject parent)
+        {
+            Vector2 playerCenter = (Vector2)position + new Vector2(0.0f, circleOffsetY);
+            
+            Collider2D[] hits = Physics2D.OverlapCircleAll(playerCenter, circleRadius, layerMask);
+
+            int count = 0;
+
+            foreach (Collider2D hit in hits)
+            {
+                if (hit.gameObject != parent && !hit.transform.IsChildOf(parent.transform))
+                {
+                    count++;
+                }
+            }
+
+            return count;
+
+        }
 
         public Collider2D[] CircleCastCollider(Vector3 position, float circleOffsetX, float circleRadius, int layerMask)
         {

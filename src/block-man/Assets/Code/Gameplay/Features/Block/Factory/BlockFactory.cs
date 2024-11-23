@@ -1,7 +1,9 @@
-﻿using Code.Common.Entity;
+﻿using System;
+using Code.Common.Entity;
 using Code.Common.Extensions;
 using Code.Gameplay.StaticData;
 using Code.Infrastructure.Identifiers;
+using Code.Infrastructure.View;
 using UnityEngine;
 
 namespace Code.Gameplay.Features.Block.Factory
@@ -10,28 +12,27 @@ namespace Code.Gameplay.Features.Block.Factory
     {
         private readonly IIdentifierService _identifiers;
         private readonly IStaticDataService _staticDataService;
+        private BlockConfig _blockConfig;
 
         public BlockFactory(IIdentifierService identifiers, IStaticDataService staticDataService)
         {
             _identifiers = identifiers;
             _staticDataService = staticDataService;
+            _blockConfig = _staticDataService.GetBlockConfig();
         }
 
         public GameEntity CreateBlock(BlockTypeId typeId, Vector3 at)
         {
-            BlockConfig baseConfig = _staticDataService.GetBlockConfig();
-            
            return CreateEntity.Empty()
                 .AddId(_identifiers.NextId())
                 .AddBlockTypeId(typeId)
                 .AddWorldPosition(at)
-                .AddSpeed(baseConfig.Speed)
-                .AddViewPrefab(_staticDataService.GetBlockPrefab(typeId).BlockPrefab)
+                .AddSpeed(_blockConfig.Speed)
+                .AddViewPrefab(PrefabBlockId(typeId))
                 .AddVerticalDirection(-1)
-                .AddHorizontalDirection(0)
                 .AddCircleOffsetY(0)
-                .AddTargetLayerMask(CollisionLayer.Block.AsMask())
-                .AddRadiusGroundCheck(baseConfig.CircleGroundRadius)
+                .AddTargetLayerMask(CollisionLayer.Cube.AsMask())
+                .AddRadiusGroundCheck(_blockConfig.CircleGroundRadius)
                 .With(x=>x.isBlock = true)
                 .With(x=>x.isMoving = true);
            
@@ -42,8 +43,18 @@ namespace Code.Gameplay.Features.Block.Factory
             return CreateEntity.Empty()
                 .AddId(_identifiers.NextId())
                 .AddWorldPosition(at)
-                .AddViewPrefab(_staticDataService.GetBlockConfig().SpawnPointPrefab)
+                .AddViewPrefab(_blockConfig.SpawnPointPrefab)
                 .With(x => x.isSpawnPoint = true);
+        }
+
+        private EntityBehaviour PrefabBlockId(BlockTypeId typeId)
+        {
+            if (!_blockConfig.BlockPrefab.TryGetValue(typeId, out var prefab))
+            {
+                throw new Exception($"No prefab found for BlockId: {typeId}");
+                
+            }
+            return prefab;
         }
         
     }

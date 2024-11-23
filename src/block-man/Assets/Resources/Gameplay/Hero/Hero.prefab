@@ -181,12 +181,6 @@ MonoBehaviour:
   GroundLayerMask:
     serializedVersion: 2
     m_Bits: 448
-  TargetLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  ChangeLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!50 &3784969458095715300
 Rigidbody2D:
   serializedVersion: 5

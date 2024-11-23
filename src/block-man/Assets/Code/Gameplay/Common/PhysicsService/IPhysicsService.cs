@@ -11,5 +11,6 @@ namespace Code.Gameplay.Common.PhysicsService
             int layerMask);
 
         Collider2D[] CircleCastCollider(Vector3 position, float circleOffsetX, float circleRadius, int layerMask);
+        int CircleCastCube(Vector3 position, float circleOffsetY, float circleRadius, int layerMask, GameObject parent);
     }
 }

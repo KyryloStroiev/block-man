@@ -12,7 +12,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e74ac3e2f154ecb9be1ce74e373b120, type: 3}
   m_Name: blockConfig
   m_EditorClassIdentifier: 
-  Speed: 0
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 6445240802041768094, guid: 5d6dc98910abe7f45b4ee1277867509c, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: BlockPrefab
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[Code.Gameplay.Features.Block.BlockTypeId,
+        Assembly-CSharp],[Code.Infrastructure.View.EntityBehaviour, Assembly-CSharp]],
+        mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Code.Gameplay.Features.Block.BlockTypeId,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  Speed: 1
   SpawnTimerInterval: 5
   CircleGroundRadius: 0.53
   SpawnPointPrefab: {fileID: 7638552371556107666, guid: d34528707ca5fe946a93f9492ef7dbd6, type: 3}
