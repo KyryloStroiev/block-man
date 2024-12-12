@@ -1,4 +1,5 @@
-﻿using Code.Common.Extensions;
+﻿using System.Collections.Generic;
+using Code.Common.Extensions;
 using Code.Gameplay.Common.CollisionRegistry;
 using Entitas;
 using UnityEngine;
@@ -18,12 +19,13 @@ namespace Code.Gameplay.Features.Block.Systems
                     GameMatcher.Block,
                     GameMatcher.Ground));
         }
-
+        
         public void Cleanup()
         {
             foreach (GameEntity block in _blocks)
             {
                 _collisionRegistry.ChangeLayerOnAll((int)Mathf.Log(CollisionLayer.CubeOnGround.AsMask(), 2), block);
+                block.Rigidbody.bodyType = RigidbodyType2D.Static;
                 block.RemoveCube();
                 block.isDestructed = true;
             }

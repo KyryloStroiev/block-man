@@ -12,5 +12,7 @@ namespace Code.Gameplay.Common.PhysicsService
 
         Collider2D[] CircleCastCollider(Vector3 position, float circleOffsetX, float circleRadius, int layerMask);
         int CircleCastCube(Vector3 position, float circleOffsetY, float circleRadius, int layerMask, GameObject parent);
+        bool RaycastCast(Vector2 position, Vector2 raycastDirection, float raycastDistance, int layerMask);
+      
     }
 }

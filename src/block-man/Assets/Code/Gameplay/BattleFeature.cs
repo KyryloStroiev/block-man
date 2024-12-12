@@ -3,6 +3,7 @@ using Code.Gameplay.Features.Hero;
 using Code.Gameplay.Features.Movement;
 using Code.Gameplay.Features.TargetCollection;
 using Code.Gameplay.Input;
+using Code.Gameplay.UI;
 using Code.Infrastructure.Systems;
 using Code.Infrastructure.View;
 
@@ -19,6 +20,7 @@ namespace Code.Gameplay
             Add(systems.Create<CollectTargetsFeature>());
             Add(systems.Create<HeroFeature>());
             Add(systems.Create<BlockFeature>());
+            Add(systems.Create<UIFeature>());
             
             Add(systems.Create<ProcessDestructedFeature>());
         }

@@ -7,6 +7,8 @@ namespace Code.Gameplay.Features.Movement
     {
         public MovementFeature(ISystemFactory systems)
         {
+            Add(systems.Create<RotationSystem>());
+            
             Add(systems.Create<TurnAlongDirectionSystem>());
             Add(systems.Create<ScaleGravitySystem>());
             Add(systems.Create<ChangeWorldPositionSystem>());

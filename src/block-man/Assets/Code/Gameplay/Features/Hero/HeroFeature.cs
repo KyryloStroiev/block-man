@@ -1,3 +1,4 @@
+using Code.Gameplay.Cameras.Systems;
 using Code.Gameplay.Features.Crosshair;
 using Code.Gameplay.Features.Movement.Systems;
 using Code.Infrastructure.Systems;
@@ -16,6 +17,7 @@ namespace Code.Gameplay.Features.Hero
             Add(systems.Create<TurnAlongDirectionSystem>());
             Add(systems.Create<CrosshairFeature>());
             Add(systems.Create<ShootHeroSystem>());
+            Add(systems.Create<CameraFollowHeroSystem>());
             Add(systems.Create<UpdateMaxHeightHeroSystem>());
             
         }

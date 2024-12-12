@@ -22,6 +22,7 @@ namespace Code.Gameplay.Features.Hero
                 if (hero.WorldPosition.y > hero.MaxHeightHero)
                 {
                     hero.ReplaceMaxHeightHero(hero.WorldPosition.y);
+                   
                 }
                 
             }

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d879030883f641248ec988f04204caec, type: 3}
   m_Name: heroConfig
   m_EditorClassIdentifier: 
-  HeroPrefab: {fileID: 7001652838084970019, guid: 48c4b95f2a5e68d4fb7a4c019aaff298, type: 3}
   Speed: 4
   JumpHeight: 3
-  MaxDistanceShoot: 15
+  MaxDistanceShoot: 13
   CircleTargetsRadius: 0.2
   CircleOffsetXTarget: 0.5
   CircleGroundRadius: 0.2
   CircleOffsetYGround: -0.29
+  HeroPrefab: {fileID: 7001652838084970019, guid: 48c4b95f2a5e68d4fb7a4c019aaff298, type: 3}
   CrosshairPrefab: {fileID: 4190201732980291845, guid: 519b05064b6ecc54eb2db474efaa37ac, type: 3}

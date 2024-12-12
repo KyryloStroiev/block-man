@@ -6,6 +6,7 @@ namespace Code.Gameplay.Features.Block.Factory
     {
         GameEntity CreateBlock(BlockTypeId typeId, Vector3 at);
         GameEntity CreateSpawnPoint(Vector3 at);
-        
+
+        GameEntity CreateListCube();
     }
 }

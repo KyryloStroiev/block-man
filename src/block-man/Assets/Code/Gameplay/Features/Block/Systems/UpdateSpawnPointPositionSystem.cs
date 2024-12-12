@@ -29,6 +29,6 @@ namespace Code.Gameplay.Features.Block.Systems
         }
 
         private Vector3 PointPosition(GameEntity hero) => 
-            new(0, hero.MaxHeightHero + 3f, 0);
+            new(0, hero.MaxHeightHero + 10f, 0);
     }
 }

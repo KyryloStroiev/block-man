@@ -9,6 +9,7 @@ namespace Code.Gameplay.Input.Service
         private bool _isJumpPressed;
         private bool _isHammerPressed;
         private bool _isShootPressed;
+        private bool _isAccelerationPressed;
 
         public InputService()
         {
@@ -23,6 +24,9 @@ namespace Code.Gameplay.Input.Service
             
             _input.Hero.Shoot.performed +=_=> _isShootPressed = true;
             _input.Hero.Shoot.canceled +=_=> _isShootPressed = false;
+            
+            _input.Hero.Acceleration.performed +=_=> _isAccelerationPressed = true;
+            _input.Hero.Acceleration.canceled +=_=> _isAccelerationPressed = false;
         }
         
 
@@ -33,6 +37,7 @@ namespace Code.Gameplay.Input.Service
 
         public bool GetButtonJump() => _isJumpPressed;
         public bool GetButtonShoot() => _isShootPressed;
+        public bool GetButtonAcceleration() => _isAccelerationPressed;
 
         public bool GetButtonHammerAttack() => 
             PressOnceButton();

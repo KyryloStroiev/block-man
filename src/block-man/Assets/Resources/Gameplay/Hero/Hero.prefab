@@ -180,7 +180,7 @@ MonoBehaviour:
   EntityView: {fileID: 7001652838084970019}
   GroundLayerMask:
     serializedVersion: 2
-    m_Bits: 448
+    m_Bits: 1472
 --- !u!50 &3784969458095715300
 Rigidbody2D:
   serializedVersion: 5
@@ -189,7 +189,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1013027438554247417}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

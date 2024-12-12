@@ -62,6 +62,15 @@ public partial class @HeroControler: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Acceleration"",
+                    ""type"": ""Button"",
+                    ""id"": ""3cd3fa14-d7be-4fdc-9c00-bbc9e32e718c"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -130,6 +139,17 @@ public partial class @HeroControler: IInputActionCollection2, IDisposable
                     ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a992780b-b3d3-492a-b6af-ec2ff198eea5"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Acceleration"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -142,6 +162,7 @@ public partial class @HeroControler: IInputActionCollection2, IDisposable
         m_Hero_Jump = m_Hero.FindAction("Jump", throwIfNotFound: true);
         m_Hero_Hammer = m_Hero.FindAction("Hammer", throwIfNotFound: true);
         m_Hero_Shoot = m_Hero.FindAction("Shoot", throwIfNotFound: true);
+        m_Hero_Acceleration = m_Hero.FindAction("Acceleration", throwIfNotFound: true);
     }
 
     ~@HeroControler()
@@ -212,6 +233,7 @@ public partial class @HeroControler: IInputActionCollection2, IDisposable
     private readonly InputAction m_Hero_Jump;
     private readonly InputAction m_Hero_Hammer;
     private readonly InputAction m_Hero_Shoot;
+    private readonly InputAction m_Hero_Acceleration;
     public struct HeroActions
     {
         private @HeroControler m_Wrapper;
@@ -220,6 +242,7 @@ public partial class @HeroControler: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Hero_Jump;
         public InputAction @Hammer => m_Wrapper.m_Hero_Hammer;
         public InputAction @Shoot => m_Wrapper.m_Hero_Shoot;
+        public InputAction @Acceleration => m_Wrapper.m_Hero_Acceleration;
         public InputActionMap Get() { return m_Wrapper.m_Hero; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -241,6 +264,9 @@ public partial class @HeroControler: IInputActionCollection2, IDisposable
             @Shoot.started += instance.OnShoot;
             @Shoot.performed += instance.OnShoot;
             @Shoot.canceled += instance.OnShoot;
+            @Acceleration.started += instance.OnAcceleration;
+            @Acceleration.performed += instance.OnAcceleration;
+            @Acceleration.canceled += instance.OnAcceleration;
         }
 
         private void UnregisterCallbacks(IHeroActions instance)
@@ -257,6 +283,9 @@ public partial class @HeroControler: IInputActionCollection2, IDisposable
             @Shoot.started -= instance.OnShoot;
             @Shoot.performed -= instance.OnShoot;
             @Shoot.canceled -= instance.OnShoot;
+            @Acceleration.started -= instance.OnAcceleration;
+            @Acceleration.performed -= instance.OnAcceleration;
+            @Acceleration.canceled -= instance.OnAcceleration;
         }
 
         public void RemoveCallbacks(IHeroActions instance)
@@ -280,5 +309,6 @@ public partial class @HeroControler: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnHammer(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
+        void OnAcceleration(InputAction.CallbackContext context);
     }
 }

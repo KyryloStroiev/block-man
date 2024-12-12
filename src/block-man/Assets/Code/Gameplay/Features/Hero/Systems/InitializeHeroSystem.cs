@@ -20,6 +20,7 @@ namespace Code.Gameplay.Features.Hero
         public void Initialize()
         {
             _blockFactory.CreateSpawnPoint(new Vector3(0,10,0));
+            _blockFactory.CreateListCube();
         }
     }
 }

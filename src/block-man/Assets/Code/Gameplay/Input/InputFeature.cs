@@ -11,6 +11,7 @@ namespace Code.Gameplay.Input
             
             Add(systems.Create<EmitAxisInputSystem>());
             Add(systems.Create<JumpInputSystem>());
+            Add(systems.Create<AccelerationInputSystem>());
             Add(systems.Create<HammerAttackInputSystem>());
             Add(systems.Create<ShootGunInputSystem>());
         }

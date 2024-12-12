@@ -24,6 +24,24 @@ namespace Code.Gameplay.Common.PhysicsService
             
             
         }
+
+        public bool RaycastCast(Vector2 position, Vector2 raycastDirection, float raycastDistance, int layerMask)
+        {
+            
+            RaycastHit2D hit = Physics2D.Raycast(position, raycastDirection, raycastDistance, layerMask);
+            Debug.DrawRay(position, raycastDirection * raycastDistance, Color.red);
+            return hit;
+        }
+        
+        public bool RaycastCastVertical(Vector2 position, float raycastDirection, float raycastDistance, int layerMask)
+        {
+            Vector2 direction = new Vector2(0, raycastDirection);
+            
+            RaycastHit2D hit = Physics2D.Raycast(position, direction, raycastDistance, layerMask);
+            Debug.DrawRay(position, direction * raycastDistance, Color.red);
+            return hit;
+        }
+        
         public int CircleCastCube(Vector3 position, float circleOffsetY, float circleRadius, int layerMask, GameObject parent)
         {
             Vector2 playerCenter = (Vector2)position + new Vector2(0.0f, circleOffsetY);
@@ -56,8 +74,7 @@ namespace Code.Gameplay.Common.PhysicsService
             Vector2 positionCircle = (Vector2)worldPosition + new Vector2(circleOffsetX * scaleHeroX, 0.0f);
             
             int hitCount = OverlapCircle(positionCircle, radius, OverlapHits, layerMask);
-
-            DrawDebug(positionCircle, radius, 1f, Color.red);
+            
       
             for (int i = 0; i < hitCount; i++)
             {

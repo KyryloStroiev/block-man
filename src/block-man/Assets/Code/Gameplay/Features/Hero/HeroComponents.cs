@@ -10,6 +10,7 @@ namespace Code.Gameplay.Features.Hero
         [Game] public class HeroAnimatorComponent: IComponent {public HeroAnimator Value; }
         [Game] public class JumpHeight: IComponent {public float Value; }
         [Game] public class MaxHeightHero: IComponent {public float Value; }
+        [Game] public class DestructCubes: IComponent {public int Value; }
 
 
     }

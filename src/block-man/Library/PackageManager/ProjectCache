@@ -5,22 +5,22 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638647874875814291
-    m_Hash: 3337763927
+      ticks: 638694374227443763
+    m_Hash: 4248416613
   m_LockFileStatus:
     m_FilePath: D:/src_Unity/block-man/src/block-man/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638647875090601503
-    m_Hash: 4061208023
+      ticks: 638694374307752134
+    m_Hash: 1065232715
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: D:/src_Unity/block-man/src/block-man/Packages
-m_EditorVersion: 6000.0.23f1 (1c4764c07fb4)
+m_EditorVersion: 6000.0.30f1 (62b05ba0686a)
 m_ResolvedPackages:
 - packageId: com.unity.collab-proxy@2.5.2
   testable: 0
@@ -118,8 +118,10 @@ m_ResolvedPackages:
     - 2.4.4
     - 2.5.1
     - 2.5.2
+    - 2.6.0
     compatible:
     - 2.5.2
+    - 2.6.0
     recommended: 2.5.2
     deprecated: []
   dependencies: []
@@ -226,9 +228,9 @@ m_ResolvedPackages:
     version: default
   resolvedDependencies:
   - name: com.unity.2d.animation
-    version: 10.1.3
+    version: 10.1.4
   - name: com.unity.2d.common
-    version: 9.0.6
+    version: 9.0.7
   - name: com.unity.burst
     version: 1.8.18
   - name: com.unity.mathematics
@@ -262,7 +264,7 @@ m_ResolvedPackages:
   - name: com.unity.2d.psdimporter
     version: 9.0.3
   - name: com.unity.2d.spriteshape
-    version: 10.0.6
+    version: 10.0.7
   - name: com.unity.modules.physics2d
     version: 1.0.0
   - name: com.unity.2d.tilemap
@@ -270,9 +272,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.tilemap
     version: 1.0.0
   - name: com.unity.2d.tilemap.extras
-    version: 4.0.2
-  - name: com.unity.ugui
-    version: 2.0.0
+    version: 4.1.0
   - name: com.unity.2d.aseprite
     version: 1.1.6
   keywords: []
@@ -307,10 +307,10 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"quickstart":"https://docs.unity3d.com/6000.0/Documentation/Manual/2DFeature.html"}'
+  upmReserved: '{"quickstart":"https://docs.unity3d.com/Documentation/Manual/2DFeature.html"}'
   assetStore:
     productId: 
-  fingerprint: deb1674107957b43c4ed1cc1727aaefb79e82396
+  fingerprint: dd1ea8910f12f021c166e8d0d78de44f1390ff6b
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.1
@@ -379,9 +379,11 @@ m_ResolvedPackages:
     - 3.0.27
     - 3.0.28
     - 3.0.31
+    - 3.0.34
     compatible:
     - 3.0.31
-    recommended: 3.0.31
+    - 3.0.34
+    recommended: 3.0.34
     deprecated: []
   dependencies:
   - name: com.unity.ext.nunit
@@ -538,10 +540,10 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.22
     minimumUnityVersion: 2019.4.25f1
-- packageId: com.unity.inputsystem@1.11.1
+- packageId: com.unity.inputsystem@1.11.2
   testable: 0
   isDirectDependency: 1
-  version: 1.11.1
+  version: 1.11.2
   source: 1
   resolvedPath: D:\src_Unity\block-man\src\block-man\Library\PackageCache\com.unity.inputsystem
   assetPath: Packages/com.unity.inputsystem
@@ -608,9 +610,10 @@ m_ResolvedPackages:
     - 1.10.0
     - 1.11.0
     - 1.11.1
+    - 1.11.2
     compatible:
-    - 1.11.1
-    recommended: 1.11.1
+    - 1.11.2
+    recommended: 1.11.2
     deprecated: []
   dependencies:
   - name: com.unity.modules.uielements
@@ -647,16 +650,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638632824854080000
+  datePublishedTicks: 638648557315530000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.inputsystem@1.11/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.com/Unity-Technologies/InputSystem.git
-    revision: 684a2848f24f4d45ffdf14900025ae9bb98c7dd8
+    revision: c8518694c7fdd2c755755e028e2ec19cdceda19b
     path: 
   unityLifecycle:
-    version: 1.11.1
+    version: 1.11.2
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -666,30 +669,27 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Fixed\n- Fixed Multiple interactions could breaks
-    on Composite Binding. [ISXB-619](https://issuetracker.unity3d.com/product/unity/issues/guid/ISXB-619)\n-
-    Fixed memory leak when the OnScreenStick component was destroyed [ISXB-1070](https://issuetracker.unity3d.com/product/unity/issues/guid/ISXB-1070).
-    Contribution by [LukeUnityDev](https://github.com/LukeUnityDev).\n- Fixed Action
-    Maps contextual menu in Action Editor UI that occasionally displays unrelated
-    items.\n- Fixed \"MissingReferenceException\" errors when closing an in-game
-    dropdown field [ISXB-1081](https://issuetracker.unity3d.com/product/unity/issues/guid/ISXB-1081).\n-
-    Fixed potential crash on Mac when using stale references to deleted InputDevice
-    objects [ISXB-606](https://issuetracker.unity3d.com/product/unity/issues/guid/ISXB-606).\n-
-    Fixed conditional compilation for non-editor analytics on platforms not enabling
-    analytics.\n\n### Changed\n- Renamed editor Resources directories to PackageResources
-    to fix package validation warnings.\n- Changed representation of GamepadButton
-    enum values in Inspector to display aliased enum values as a single item to avoid
-    confusion around selection and aliased value display when multiple enum items
-    map to the same numerical value. [ISXB-543](https://issuetracker.unity3d.com/product/unity/issues/guid/ISXB-543)\n-
-    PlayerInput component now warns if the system cannot find matching control scheme,
-    which can occur if all control schemes already paired (e.g. to other game objects
-    with PlayerInput components) [ISXB-1020](https://issuetracker.unity3d.com/product/unity/issues/guid/ISXB-1020)"}'
+  upmReserved: '{"changelog":"### Fixed\n- Fixed touch pointers being released twice
+    causing an index out of bounds error. [ISXB-687](https://issuetracker.unity3d.com/product/unity/issues/guid/ISXB-687)\n-
+    Fixed `NullReferenceException` from disconnecting and reconnecting a GXDKGamepad.\n-
+    Fixed wrong mapping of Xbox Series S|X and Xbox One wireless controllers \"View\"
+    button on macOS.[ISXB-385](https://issuetracker.unity3d.com/product/unity/issues/guid/ISXB-385)\n-
+    Fixed \"AnalyticsResult\" errors on consoles [ISXB-1107]\n- Fixed wrong `Display
+    Index` value for touchscreen events.[ISXB-1101](https://issuetracker.unity3d.com/product/unity/issues/guid/ISXB-1101)\n-
+    Fixed event handling when using Fixed Update processing where WasPressedThisFrame
+    could appear to true for consecutive frames [ISXB-1006](https://issuetracker.unity3d.com/product/unity/issues/guid/ISXB-1006)\n\n###
+    Added\n- Added the display of the device flag `CanRunInBackground` in device
+    debug view.\n- Added analytics for programmatic `InputAction` setup via `InputActionSetupExtensions`
+    when exiting play-mode.\n\n### Fixed\n- Removed a redundant warning when using
+    fallback code to parse a HID descriptor. (UUM-71260)\n\n### Changed\n- Removed
+    the InputManager to InputSystem project-wide asset migration code for performance
+    improvement (ISX-2086)"}'
   assetStore:
     productId: 
-  fingerprint: f32e50d372b38a6a40f5382ad8ab0d11ac27b67d
+  fingerprint: 3c4a97c3950fef77960981e0fe90613de6e512ee
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 1.11.1
+    minimumPackageVersion: 1.11.2
     minimumUnityVersion: 2019.4.0a1
 - packageId: com.unity.multiplayer.center@1.0.0
   testable: 0
@@ -776,7 +776,7 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: b27203cbee4b0eb1910981fa8a1f299c8134b318
+  fingerprint: f502d8ac613fa076192423e73892fbd89eb4049b
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.0
@@ -1214,15 +1214,15 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 8f98c6a1c75e66adfac0fb4351d51a0b4d92c018
+  fingerprint: fd5da3b4bec8d043b01c30177bd62059c5fa36d0
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.0
     minimumUnityVersion: 2019.2.0a1
-- packageId: com.unity.visualscripting@1.9.4
+- packageId: com.unity.visualscripting@1.9.5
   testable: 0
   isDirectDependency: 1
-  version: 1.9.4
+  version: 1.9.5
   source: 1
   resolvedPath: D:\src_Unity\block-man\src\block-man\Library\PackageCache\com.unity.visualscripting
   assetPath: Packages/com.unity.visualscripting
@@ -1264,17 +1264,16 @@ m_ResolvedPackages:
     - 1.7.6
     - 1.7.7
     - 1.7.8
-    - 1.8.0-pre.1
     - 1.8.0
     - 1.9.0
     - 1.9.1
     - 1.9.2
     - 1.9.4
+    - 1.9.5
     compatible:
-    - 1.9.4
-    recommended: 1.9.4
-    deprecated:
-    - 1.8.0-pre.1
+    - 1.9.5
+    recommended: 1.9.5
+    deprecated: []
   dependencies:
   - name: com.unity.ugui
     version: 1.0.0
@@ -1302,16 +1301,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638488567680000000
+  datePublishedTicks: 638659692270900000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.visualscripting.git
-    revision: 41aac2b7038c2b1259c546329890d3736ce2394e
+    revision: 3621ef0207747a605f195118ba99d1a8bdb19433
     path: 
   unityLifecycle:
-    version: 1.9.4
+    version: 1.9.5
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -1321,14 +1320,19 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Fixed\n- Fixed sqlite dll changes not being recognized
-    correctly by the 2022.3 Unity Editor"}'
+  upmReserved: '{"changelog":"### Fixed\n- Fixed \"NullReferenceException\" error
+    when returning to the State Graph from the Script Graph. [UVSB-1905](https://issuetracker.unity3d.com/product/unity/issues/guid/UVSB-1905)\n-
+    Fixed compilation error when a graph contains a reference to a method with an
+    \"in\" parameter. [UVSB-2544](https://issuetracker.unity3d.com/product/unity/issues/guid/UVSB-2487)\n-
+    Added missing truncate function to Formula node [UVSB-2526](https://issuetracker.unity3d.com/product/unity/issues/guid/UVSB-2525)\n-
+    Fixed an error when creating a Script Graph asset in an empty project\n\n###
+    Changed\n- Updated deprecated EditorAnalytics APIs to new ones"}'
   assetStore:
     productId: 
-  fingerprint: 0920df93f9574f857a55af27bd38fdd9230a3f51
+  fingerprint: 1b53f46e931bea668e53f1feb0ac9138170c9455
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 1.9.4
+    minimumPackageVersion: 1.9.5
     minimumUnityVersion: 2021.3.0a1
 - packageId: com.unity.modules.accessibility@1.0.0
   testable: 0
@@ -3830,10 +3834,10 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 2.0.5
     minimumUnityVersion: 2019.4.0a1
-- packageId: com.unity.2d.animation@10.1.3
+- packageId: com.unity.2d.animation@10.1.4
   testable: 0
   isDirectDependency: 0
-  version: 10.1.3
+  version: 10.1.4
   source: 1
   resolvedPath: D:\src_Unity\block-man\src\block-man\Library\PackageCache\com.unity.2d.animation
   assetPath: Packages/com.unity.2d.animation
@@ -3844,7 +3848,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: asset
+  type: 
   description: 2D Animation provides all the necessary tooling and runtime components
     for skeletal animation using Sprites.
   errors: []
@@ -3979,13 +3983,14 @@ m_ResolvedPackages:
     - 10.1.1
     - 10.1.2
     - 10.1.3
+    - 10.1.4
     compatible:
-    - 10.1.3
-    recommended: 10.1.3
+    - 10.1.4
+    recommended: 10.1.4
     deprecated: []
   dependencies:
   - name: com.unity.2d.common
-    version: 9.0.6
+    version: 9.0.7
   - name: com.unity.2d.sprite
     version: 1.0.0
   - name: com.unity.collections
@@ -3996,7 +4001,7 @@ m_ResolvedPackages:
     version: 1.0.0
   resolvedDependencies:
   - name: com.unity.2d.common
-    version: 9.0.6
+    version: 9.0.7
   - name: com.unity.burst
     version: 1.8.18
   - name: com.unity.mathematics
@@ -4040,16 +4045,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638587939350000000
+  datePublishedTicks: 638654459075740000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.animation@10.1/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: 8e3a56a8fe7951b15f737aee13ba8a90be9d2dc5
+    revision: c393ad93bdba3e78ebd30a5ccd2e6da5d8b92aba
     path: 
   unityLifecycle:
-    version: 10.1.3
+    version: 10.1.4
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -4059,26 +4064,25 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Fixed\n- Sprite Swap overlay Label selection not
-    reacting to mouse clicks. (case DANB-627)\n- Sprite Swap overlay selection lock
-    behavior. (case DANB-629)\n- Sprite Bone Influence tab bone reordering. (case
-    DANB-634)\n- Documentation, comments, and other requirements to conform to Package
-    Validation. (DANB-653)\n- Wrong Label is deleted when a newly created Label is
-    deleted in the Sprite Library Editor. (case DANB-665)\n- Cannot select multiple
-    Labels in the Sprite Library Editor when using Grid View. (case DANB-670)\n-
-    Documentation, comments, and other requirements to conform to Package Validation.
-    (DANB-653)\n- Support for renaming Sprite Library Editor entries with ''F2''
-    on Windows. (DANB-674)\n- Renaming functionality for Labels is available to users
-    when multiple Labels are selected. (case DANB-668)\n- Fixed SpriteSkin''s playmode
-    test failures. (case DANB-678)\n- Modifying the Sprite Skin component through
-    public API.\n- Skinning Editor bone and mesh Visibility sliders too short. (case
-    DANB-681)"}'
+  upmReserved: '{"changelog":"### Fixed\n- Animation Preview window sometimes does
+    not display deformed Sprites. (DANB-705)\n- Sprite Resolver missing sprite previews
+    when dealing with large number of entries. (DANB-714)\n- Misaligned label previews
+    in Sprite Resolver''s inspector. (DANB-722)\n- Sprite Resolver component not
+    updated after Sprite Library Asset has been modified. (DANB-727)\n- Sprite Skin
+    breaks in the animation preview window after sprite swap. (DANB-743)\n- IK gizmos
+    are displayed in the SceneView when IKManager2D is active in Animation Preview
+    window. (DANB-738)\n- IK solvers are misaligned when bones have different depths.
+    (DANB-753)\n- Rendering issues with SRP Batching and Sprite mask. (DANB-760)\n-
+    Unable to drag sprites into empty rows of the Sprite Library Editor. (DANB-749)\n-
+    Sprite Skin deformation systems have outdated data after sprite swap. (DANB-766)\n-
+    Setting incorrect computer buffer size. (DANB-768)\n- Reenable editor tests.\n-
+    Bone buffer binding issues.\n- Sprite changed callback listeners."}'
   assetStore:
     productId: 
-  fingerprint: 482d8d36f6a871bb441aac7eba62cccb09b1848e
+  fingerprint: 494a3b4e73a9ae26677ef6e9fd6bff4ca643770a
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 10.1.3
+    minimumPackageVersion: 10.1.4
     minimumUnityVersion: 2023.1.0a1
 - packageId: com.unity.2d.pixel-perfect@5.0.3
   testable: 0
@@ -4286,7 +4290,7 @@ m_ResolvedPackages:
     version: 1.0.0
   resolvedDependencies:
   - name: com.unity.2d.common
-    version: 9.0.6
+    version: 9.0.7
   - name: com.unity.burst
     version: 1.8.18
   - name: com.unity.mathematics
@@ -4415,15 +4419,15 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 0e70656ef5df5c7161c8cfc6f24ab0dde0dc637e
+  fingerprint: 6e37a90069af6bceba270d5e592cd6f3521c7a27
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.0
     minimumUnityVersion: 2019.2.0a1
-- packageId: com.unity.2d.spriteshape@10.0.6
+- packageId: com.unity.2d.spriteshape@10.0.7
   testable: 0
   isDirectDependency: 0
-  version: 10.0.6
+  version: 10.0.7
   source: 1
   resolvedPath: D:\src_Unity\block-man\src\block-man\Library\PackageCache\com.unity.2d.spriteshape
   assetPath: Packages/com.unity.2d.spriteshape
@@ -4434,7 +4438,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: assets
+  type: 
   description: SpriteShape Runtime & Editor Package contains the tooling and the
     runtime component that allows you to create very organic looking spline based
     2D worlds. It comes with intuitive configurator and a highly performant renderer.
@@ -4530,20 +4534,21 @@ m_ResolvedPackages:
     - 10.0.4
     - 10.0.5
     - 10.0.6
+    - 10.0.7
     compatible:
-    - 10.0.6
-    recommended: 10.0.6
+    - 10.0.7
+    recommended: 10.0.7
     deprecated: []
   dependencies:
   - name: com.unity.2d.common
-    version: 9.0.5
+    version: 9.0.7
   - name: com.unity.mathematics
     version: 1.1.0
   - name: com.unity.modules.physics2d
     version: 1.0.0
   resolvedDependencies:
   - name: com.unity.2d.common
-    version: 9.0.6
+    version: 9.0.7
   - name: com.unity.burst
     version: 1.8.18
   - name: com.unity.mathematics
@@ -4583,16 +4588,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638521593200000000
+  datePublishedTicks: 638654459104040000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.spriteshape@10.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: 17a608efe14b0d459b419658c1db24bbc2cfbe57
+    revision: baf581b10d05f7aa59c58b39f4b798829f703946
     path: 
   unityLifecycle:
-    version: 10.0.6
+    version: 10.0.7
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -4602,14 +4607,14 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Changed\n- Update Spriteshape package to 2D Common
-    package 9.0.5 dependency."}'
+  upmReserved: '{"changelog":"### Fixed\n- DANB-731 \"System.IndexOutOfRangeException\"
+    is thrown when increasing Sprite Shape Mesh size beyond limits"}'
   assetStore:
     productId: 
-  fingerprint: bd096f9a58153b3fab6d968be6480077748d80c4
+  fingerprint: 9e35352ae135f602746220e7edc09eb95bbec530
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 10.0.6
+    minimumPackageVersion: 10.0.7
     minimumUnityVersion: 2023.1.0a1
 - packageId: com.unity.2d.tilemap@1.0.0
   testable: 0
@@ -4693,15 +4698,15 @@ m_ResolvedPackages:
   upmReserved: 
   assetStore:
     productId: 
-  fingerprint: 6bdab8e797050ef862d77161c1dd31c993cc2a57
+  fingerprint: 90fc3d022e139285a361c6ed808cb991b4d07184
   editorCompatibility:
     compatibilityLevel: 0
     minimumPackageVersion: 1.0.0
     minimumUnityVersion: 2019.2.0a1
-- packageId: com.unity.2d.tilemap.extras@4.0.2
+- packageId: com.unity.2d.tilemap.extras@4.1.0
   testable: 0
   isDirectDependency: 0
-  version: 4.0.2
+  version: 4.1.0
   source: 1
   resolvedPath: D:\src_Unity\block-man\src\block-man\Library\PackageCache\com.unity.2d.tilemap.extras
   assetPath: Packages/com.unity.2d.tilemap.extras
@@ -4712,7 +4717,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: assets
+  type: 
   description: '2D Tilemap Extras is a package that contains extra scripts for use
     with 2D Tilemap features in Unity. These include custom Tiles and Brushes for
     the Tilemap feature.
@@ -4754,6 +4759,7 @@ m_ResolvedPackages:
     - 2.2.5
     - 2.2.6
     - 2.2.7
+    - 2.2.8
     - 3.0.0
     - 3.0.1
     - 3.0.2
@@ -4768,13 +4774,12 @@ m_ResolvedPackages:
     - 4.0.0
     - 4.0.1
     - 4.0.2
+    - 4.1.0
     compatible:
-    - 4.0.2
-    recommended: 4.0.2
+    - 4.1.0
+    recommended: 4.1.0
     deprecated: []
   dependencies:
-  - name: com.unity.ugui
-    version: 1.0.0
   - name: com.unity.2d.tilemap
     version: 1.0.0
   - name: com.unity.modules.tilemap
@@ -4782,12 +4787,6 @@ m_ResolvedPackages:
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
   resolvedDependencies:
-  - name: com.unity.ugui
-    version: 2.0.0
-  - name: com.unity.modules.ui
-    version: 1.0.0
-  - name: com.unity.modules.imgui
-    version: 1.0.0
   - name: com.unity.2d.tilemap
     version: 1.0.0
   - name: com.unity.modules.tilemap
@@ -4795,6 +4794,10 @@ m_ResolvedPackages:
   - name: com.unity.modules.physics2d
     version: 1.0.0
   - name: com.unity.modules.uielements
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
     version: 1.0.0
   - name: com.unity.modules.jsonserialize
     version: 1.0.0
@@ -4814,16 +4817,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638294344990000000
-  documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.tilemap.extras@4.0/manual/index.html
+  datePublishedTicks: 638654459126220000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.tilemap.extras@4.1/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.com/Unity-Technologies/2d-extras.git
-    revision: 21a24803135ec4fbe47be9ccd27fb06e47d06d88
+    revision: 8d9a9d9b09b21c40c727e0dfb6188875f796d9f5
     path: 
   unityLifecycle:
-    version: 4.0.2
+    version: 4.1.0
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -4833,15 +4836,17 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Fixed\n- [GameObjectBrush] Use cell offset to determine
-    location of GameObject when painting and erasing"}'
+  upmReserved: '{"changelog":"### Fixed\n\n- [GameObjectBrush] Allow expansion of
+    SceneRoot Grid foldout when clicking on label\n- [GridInformation] Fix exception
+    when serializing GridInformation component if component is part of a Prefab\n-
+    Remove dependency on com.unity.ugui"}'
   assetStore:
     productId: 
-  fingerprint: 6a6fc3dece599bfc4df5dd2cb0da6635868f1281
+  fingerprint: 13634da7dbe06c39bac6bbe2d1a166cf91f58ad7
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 4.0.2
-    minimumUnityVersion: 2023.1.0a1
+    minimumPackageVersion: 4.1.0
+    minimumUnityVersion: 6000.0.0a1
 - packageId: com.unity.2d.aseprite@1.1.6
   testable: 0
   isDirectDependency: 0
@@ -4875,9 +4880,11 @@ m_ResolvedPackages:
     - 1.1.4
     - 1.1.5
     - 1.1.6
+    - 1.1.7
     compatible:
     - 1.1.6
-    recommended: 1.1.6
+    - 1.1.7
+    recommended: 1.1.7
     deprecated: []
   dependencies:
   - name: com.unity.2d.common
@@ -4890,7 +4897,7 @@ m_ResolvedPackages:
     version: 1.0.0
   resolvedDependencies:
   - name: com.unity.2d.common
-    version: 9.0.6
+    version: 9.0.7
   - name: com.unity.burst
     version: 1.8.18
   - name: com.unity.mathematics
@@ -4955,10 +4962,10 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 1.1.6
     minimumUnityVersion: 2021.3.15f1
-- packageId: com.unity.2d.common@9.0.6
+- packageId: com.unity.2d.common@9.0.7
   testable: 0
   isDirectDependency: 0
-  version: 9.0.6
+  version: 9.0.7
   source: 1
   resolvedPath: D:\src_Unity\block-man\src\block-man\Library\PackageCache\com.unity.2d.common
   assetPath: Packages/com.unity.2d.common
@@ -4969,7 +4976,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: asset
+  type: 
   description: 2D Common is a package that contains shared functionalities that are
     used by most of the other 2D packages.
   errors: []
@@ -5034,9 +5041,10 @@ m_ResolvedPackages:
     - 9.0.4
     - 9.0.5
     - 9.0.6
+    - 9.0.7
     compatible:
-    - 9.0.6
-    recommended: 9.0.6
+    - 9.0.7
+    recommended: 9.0.7
     deprecated: []
   dependencies:
   - name: com.unity.burst
@@ -5082,16 +5090,16 @@ m_ResolvedPackages:
   entitlements:
     licensingModel: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638587939290000000
+  datePublishedTicks: 638654459039420000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.common@9.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: 8e3a56a8fe7951b15f737aee13ba8a90be9d2dc5
+    revision: c393ad93bdba3e78ebd30a5ccd2e6da5d8b92aba
     path: 
   unityLifecycle:
-    version: 9.0.6
+    version: 9.0.7
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -5101,14 +5109,16 @@ m_ResolvedPackages:
   git:
     hash: 
     revision: 
-  upmReserved: '{"changelog":"### Added\n- Internal functionality to support 2D Muse.\n\n###
-    Changed\n- Atlas sample to use correct filepath when building for Android."}'
+  upmReserved: '{"changelog":"### Fixed\n- DANB-638 Fixed Error \"InvalidOperationException:
+    HTTP/1.1 404 Not Found\" logged when entering Play Mode in 2D Common Sample Scene\n-
+    DANB-637 Fixed Sprite Atlases included in the 2D Common Package Sample \"Sprite
+    Atlas Samples\" are blurry even though they are uncompressed"}'
   assetStore:
     productId: 
-  fingerprint: a819feaf03690d15a1e56c9aaf0bcd8e7e275bc5
+  fingerprint: bb1fc9b3d81b3bb452c6708e8c088fe4224a0369
   editorCompatibility:
     compatibilityLevel: 0
-    minimumPackageVersion: 9.0.6
+    minimumPackageVersion: 9.0.7
     minimumUnityVersion: 2023.1.0a1
 - packageId: com.unity.mathematics@1.3.2
   testable: 0
@@ -5798,4 +5808,4 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 3.0.3
     minimumUnityVersion: 2020.3.0a1
-m_BuiltInPackagesHash: 4f75c37d7db9cb7d9b9c9879cb839d8c6f4a1918
+m_BuiltInPackagesHash: f059cafdb442bef7ad05beca6deab6b7fe27fbb8

@@ -31,6 +31,7 @@ namespace Code.Gameplay.Features.Hero.Factory
                 .AddSpeed(baseData.Speed)
                 .AddHorizontalDirection(0)
                 .AddVerticalDirection(0)
+                .AddDestructCubes(0)
                 .AddRadiusGroundCheck(baseData.CircleGroundRadius)
                 .AddCircleOffsetY(baseData.CircleOffsetYGround)
                 .AddJumpHeight(baseData.JumpHeight)

@@ -27,25 +27,16 @@ namespace Code.Gameplay.Features.Block.Systems
 
         public void Execute()
         {
-            foreach (GameEntity crosshair in _crosshairs)
-            foreach (GameEntity block in _blocks.GetEntities(_buffer))
-            foreach (GameObject cube in block.Cube)
-            {
-                if (OverlapCircle(block, cube.transform) > 0)
-                {
-                    
-                }
-            }
             
-            /*bool isShooting = IsShooting();
+            bool isShooting = IsShooting();
             
             foreach (GameEntity entity in _blocks.GetEntities(_buffer))
             {
                 ProcessEntity(entity, isShooting);
-            }*/
+            }
         }
 
-        /*private void ProcessEntity(GameEntity entity, bool isShooting)
+        private void ProcessEntity(GameEntity entity, bool isShooting)
         {
             if (isShooting && HasOverlap(entity))
                 entity.ReplaceVerticalDirection(0);
@@ -63,13 +54,13 @@ namespace Code.Gameplay.Features.Block.Systems
         }
         private bool IsShooting()
         {
-            foreach (GameEntity crosshair in _crosshair)
+            foreach (GameEntity crosshair in _crosshairs)
             {
                 if (crosshair.isShoot)
                     return true;
             }
             return false;
-        }*/
+        }
 
         private int OverlapCircle(GameEntity entity, Transform childBlock)
         {
@@ -77,4 +68,6 @@ namespace Code.Gameplay.Features.Block.Systems
                 entity.TargetLayerMask, entity.Transform.gameObject);
         }
     }
+    
+    
 }

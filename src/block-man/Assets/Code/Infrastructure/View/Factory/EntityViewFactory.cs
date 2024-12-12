@@ -8,7 +8,7 @@ namespace Code.Infrastructure.View.Factory
     {
         private readonly IAssetProvider _assetProvider;
         private readonly IInstantiator _instantiator;
-        private readonly Vector3 _farAway = new Vector3(-999, 999, 0);
+        private readonly Vector3 _farAway = new Vector3(0, 999, 0);
 
         public EntityViewFactory(IAssetProvider assetProvider, IInstantiator instantiator)
         {

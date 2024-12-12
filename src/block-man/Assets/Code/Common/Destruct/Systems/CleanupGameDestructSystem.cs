@@ -19,6 +19,7 @@ namespace Code.Common.Destruct.Systems
     {
       foreach (GameEntity entity in _entities.GetEntities(_buffer))
       {
+        
         entity.Destroy();
       }
     }

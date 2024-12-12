@@ -59,3 +59,12 @@ The following packages were updated:
   com.unity.ugui from version 1.0.0 to 2.0.0
 The following packages were removed:
   com.unity.textmeshpro@3.0.9
+
+=== Tue Dec 10 16:23:42 2024
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.inputsystem from version 1.11.1 to 1.11.2
+  com.unity.visualscripting from version 1.9.4 to 1.9.5

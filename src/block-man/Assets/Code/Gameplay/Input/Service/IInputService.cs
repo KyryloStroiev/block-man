@@ -8,5 +8,6 @@
         void Cleanup();
         bool GetButtonHammerAttack();
         bool GetButtonShoot();
+        bool GetButtonAcceleration();
     }
 }

@@ -24,9 +24,9 @@ namespace Code.Gameplay.Features.Crosshair.Systems
         public void Execute()
         {
             foreach (GameEntity hero in _heroes)
-            foreach (GameEntity mouse in _crosshairs)
+            foreach (GameEntity crosshair in _crosshairs)
             {
-                mouse.ReplaceWorldPosition(PositionMouse(hero, mouse.MaxDistanceShoot));
+                crosshair.ReplaceWorldPosition(PositionMouse(hero, crosshair.MaxDistanceShoot));
             }
         }
 

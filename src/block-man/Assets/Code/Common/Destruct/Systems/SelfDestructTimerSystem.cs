@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Code.Gameplay.Common.Time;
 using Entitas;
+using UnityEngine;
 
 namespace Code.Common.Destruct.Systems
 {
@@ -24,11 +25,13 @@ namespace Code.Common.Destruct.Systems
                 if (entity.SelfDestructTimer > 0)
                 {
                     entity.ReplaceSelfDestructTimer(entity.SelfDestructTimer - _time.DeltaTime);
+                  
                 }
                 else
                 {
                     entity.RemoveSelfDestructTimer();
                     entity.isDestructed = true;
+                   
                 }
             }
         }

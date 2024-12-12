@@ -2,8 +2,15 @@
 {
     public enum BlockTypeId
     {
-        Unknow = 0,
-        BlockI = 1,
+       
+        I = 0,
+        J = 1,
+        L = 2,
+        O = 3,
+        S = 4,
+        T = 5,
+        Z = 6,
+        EnemyBlock = 7,
         
     }
 }

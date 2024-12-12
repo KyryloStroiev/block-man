@@ -9,12 +9,13 @@ namespace Code.Gameplay.Features.Hero
         private readonly IPhysicsService _physicsService;
         private readonly IGroup<GameEntity> _damageDealer;
         private readonly IGroup<GameEntity> _inputs;
-
+        
         public AttackHammerHeroSystem(GameContext game, IPhysicsService physicsService)
         {
             _physicsService = physicsService;
             _damageDealer = game.GetGroup(GameMatcher
                 .AllOf(GameMatcher.Hero,
+                    GameMatcher.DestructCubes,
                     GameMatcher.HeroAnimator));
             _inputs = game.GetGroup(GameMatcher
                 .AllOf(GameMatcher.Input,
@@ -32,6 +33,7 @@ namespace Code.Gameplay.Features.Hero
                     {
                         GameObject obj = collider.gameObject;
                         Object.Destroy(obj);
+                        damageDealer.ReplaceDestructCubes(damageDealer.DestructCubes + 1);
                     }
                     damageDealer.HeroAnimator.PlayAttackHammer();
                     

@@ -9,5 +9,6 @@ namespace Code.Common
     [Game] public class SelfDestructTimer: IComponent {public float Value; }
     [Game] public class Destructed: IComponent { }
 
+
 }
 

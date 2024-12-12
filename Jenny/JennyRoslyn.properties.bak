@@ -1,26 +1,22 @@
-Jenny.SearchPaths = Jenny/Plugins/DesperateDevs, \
-                    Jenny/Plugins/Entitas, \
-                    Jenny/Plugins/Entitas.Roslyn, \
-                    ../src/TheCatCase/Library/ScriptAssemblies
-
-Jenny.Plugins = DesperateDevs.CodeGeneration.Plugins, \
-                DesperateDevs.CodeGeneration.Unity.Plugins, \
-                Entitas.CodeGeneration.Plugins, \
+Jenny.SearchPaths = Jenny/Plugins/Entitas, \
+                    Jenny/Plugins/Jenny, \
+                   ../src/block-man/Assets/Entitas/Entitas, \
+                    ../src/CustomGenerators/bin
+                    
+Jenny.Plugins = Entitas.CodeGeneration.Plugins, \
                 Entitas.Roslyn.CodeGeneration.Plugins, \
                 Entitas.VisualDebugging.CodeGeneration.Plugins, \
-                CustomGenerators
-
-Jenny.PreProcessors = DesperateDevs.CodeGeneration.Plugins.ValidateProjectPathPreProcessor, \
-                      DesperateDevs.CodeGeneration.Plugins.TargetFrameworkProfilePreProcessor
-
-Jenny.DataProviders = Entitas.Roslyn.CodeGeneration.Plugins.ComponentDataProvider, \
-                      Entitas.CodeGeneration.Plugins.ContextDataProvider, \
+                Jenny.Plugins, \
+                Jenny.Plugins.Unity
+Jenny.PreProcessors = Jenny.Plugins.ValidateProjectPathPreProcessor, \
+                      Jenny.Plugins.ReferenceAssemblyPathsPreProcessor
+Jenny.DataProviders = Entitas.CodeGeneration.Plugins.ContextDataProvider, \
                       Entitas.Roslyn.CodeGeneration.Plugins.CleanupDataProvider, \
+                      Entitas.Roslyn.CodeGeneration.Plugins.ComponentDataProvider, \
                       Entitas.Roslyn.CodeGeneration.Plugins.EntityIndexDataProvider
-
-Jenny.CodeGenerators = Assets.Editor.CustomGenerators.SingleValueComponentContextPropertyGenerator, \
-                       Assets.Editor.CustomGenerators.SingleValueComponentPropertyGenerator, \
-                       Assets.Editor.CustomGenerators.SingleValueComponentEntityApiInterfaceGenerator, \
+Jenny.CodeGenerators = KSyndicate.CustomGenerators.Plugins.SingleValueComponentContextPropertyGenerator, \
+                       KSyndicate.CustomGenerators.Plugins.SingleValueComponentPropertyGenerator, \
+                       KSyndicate.CustomGenerators.Plugins.SingleValueComponentEntityApiInterfaceGenerator, \
                        Entitas.CodeGeneration.Plugins.ComponentGenerator, \
                        Entitas.CodeGeneration.Plugins.ComponentLookupGenerator, \
                        Entitas.CodeGeneration.Plugins.ComponentMatcherApiGenerator, \
@@ -32,24 +28,22 @@ Jenny.CodeGenerators = Assets.Editor.CustomGenerators.SingleValueComponentContex
                        Entitas.CodeGeneration.Plugins.EntityIndexGenerator, \
                        Entitas.CodeGeneration.Plugins.EventEntityApiGenerator, \
                        Entitas.CodeGeneration.Plugins.EventListenerComponentGenerator, \
-                       Entitas.CodeGeneration.Plugins.EventListenertInterfaceGenerator, \
+                       Entitas.CodeGeneration.Plugins.EventListenerInterfaceGenerator, \
                        Entitas.CodeGeneration.Plugins.EventSystemGenerator, \
                        Entitas.CodeGeneration.Plugins.EventSystemsGenerator, \
-                       Entitas.VisualDebugging.CodeGeneration.Plugins.ContextObserverGenerator, \
-                       Entitas.VisualDebugging.CodeGeneration.Plugins.FeatureClassGenerator, \
                        Entitas.Roslyn.CodeGeneration.Plugins.CleanupSystemGenerator, \
-                       Entitas.Roslyn.CodeGeneration.Plugins.CleanupSystemsGenerator
-
-Jenny.PostProcessors = DesperateDevs.CodeGeneration.Plugins.AddFileHeaderPostProcessor, \
-                       DesperateDevs.CodeGeneration.Plugins.CleanTargetDirectoryPostProcessor, \
-                       DesperateDevs.CodeGeneration.Plugins.MergeFilesPostProcessor, \
-                       DesperateDevs.CodeGeneration.Plugins.NewLinePostProcessor, \
-                       DesperateDevs.CodeGeneration.Plugins.WriteToDiskPostProcessor, \
-					   DesperateDevs.CodeGeneration.Plugins.ConsoleWriteLinePostProcessor
-
+                       Entitas.Roslyn.CodeGeneration.Plugins.CleanupSystemsGenerator, \
+                       Entitas.VisualDebugging.CodeGeneration.Plugins.ContextObserverGenerator, \
+                       Entitas.VisualDebugging.CodeGeneration.Plugins.FeatureClassGenerator
+Jenny.PostProcessors = Jenny.Plugins.AddFileHeaderPostProcessor, \
+                       Jenny.Plugins.CleanTargetDirectoryPostProcessor, \
+                       Jenny.Plugins.MergeFilesPostProcessor, \
+                       Jenny.Plugins.UpdateCsprojPostProcessor, \
+                       Jenny.Plugins.WriteToDiskPostProcessor, \
+                       Jenny.Plugins.ConsoleWriteLinePostProcessor
 Jenny.Server.Port = 3333
 Jenny.Client.Host = localhost
-DesperateDevs.CodeGeneration.Plugins.ProjectPath = ../src/TheCatCase/Assembly-CSharp.csproj
-Entitas.CodeGeneration.Plugins.Contexts = Game,Logic,Data,Battle
-Entitas.CodeGeneration.Plugins.IgnoreNamespaces = true
-DesperateDevs.CodeGeneration.Plugins.TargetDirectory = ../src/TheCatCase/Assets/Code
+Entitas.CodeGeneration.Plugins.Contexts = Game
+Entitas.CodeGeneration.Plugins.IgnoreNamespaces = false
+Jenny.Plugins.ProjectPath = Assembly-CSharp.csproj
+Jenny.Plugins.TargetDirectory = Assets

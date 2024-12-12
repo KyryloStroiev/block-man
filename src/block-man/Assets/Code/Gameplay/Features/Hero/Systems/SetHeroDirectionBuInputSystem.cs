@@ -1,3 +1,4 @@
+using Code.Gameplay.Common.PhysicsService;
 using Code.Gameplay.Input.Service;
 using Entitas;
 using UnityEngine;
@@ -11,8 +12,10 @@ namespace Code.Gameplay.Features.Hero
 
         public SetHeroDirectionBuInputSystem(GameContext game)
         {
+          
             _heroes = game.GetGroup(GameMatcher.Hero);
-            _inputs = game.GetGroup(GameMatcher.Input);
+            _inputs = game.GetGroup(GameMatcher
+                .AllOf(GameMatcher.Input).NoneOf(GameMatcher.ShootInput));
         }
 
         public void Execute()
@@ -21,8 +24,8 @@ namespace Code.Gameplay.Features.Hero
             foreach (GameEntity hero in _heroes)
             {
                 hero.isMoving = input.hasAxisInput;
-
-                if (input.hasAxisInput)
+                
+                if(input.hasAxisInput)
                     hero.ReplaceHorizontalDirection(input.AxisInput);
                 
             }
