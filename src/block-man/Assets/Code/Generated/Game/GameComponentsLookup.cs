@@ -9,65 +9,73 @@
 public static class GameComponentsLookup {
 
     public const int Destructed = 0;
-    public const int SelfDestructTimer = 1;
-    public const int View = 2;
-    public const int ViewPath = 3;
-    public const int ViewPrefab = 4;
-    public const int Id = 5;
-    public const int SpriteRenderer = 6;
-    public const int Transform = 7;
-    public const int WorldPosition = 8;
-    public const int AddCube = 9;
-    public const int AllCube = 10;
-    public const int Block = 11;
-    public const int BlockColliding = 12;
-    public const int BlockTypeId = 13;
-    public const int ChangingLayer = 14;
-    public const int Cube = 15;
-    public const int EnemyBlock = 16;
-    public const int SpawnPoint = 17;
-    public const int SpawnReady = 18;
-    public const int SpawnTimer = 19;
-    public const int SpawnTimerInterval = 20;
-    public const int Crosshair = 21;
-    public const int MaxDistanceShoot = 22;
-    public const int Shoot = 23;
-    public const int DestructCubes = 24;
-    public const int Hero = 25;
-    public const int HeroAnimator = 26;
-    public const int Jump = 27;
-    public const int JumpHeight = 28;
-    public const int MaxHeightHero = 29;
-    public const int Gravity = 30;
-    public const int HorizontalDirection = 31;
-    public const int Moving = 32;
-    public const int Rigidbody = 33;
-    public const int RotationSpeed = 34;
-    public const int Speed = 35;
-    public const int TurnedAlongDirection = 36;
-    public const int VerticalDirection = 37;
-    public const int CircleOffsetX = 38;
-    public const int CircleOffsetY = 39;
-    public const int Ground = 40;
-    public const int GroundLayerMask = 41;
-    public const int RadiusCastTargets = 42;
-    public const int RadiusGroundCheck = 43;
-    public const int ReadyToCollectTargets = 44;
-    public const int TargetLayerMask = 45;
-    public const int Targets = 46;
-    public const int TargetsBuffer = 47;
-    public const int AccelerationInput = 48;
-    public const int AxisInput = 49;
-    public const int HammerAttackInput = 50;
-    public const int Input = 51;
-    public const int JumpInput = 52;
-    public const int ShootInput = 53;
-    public const int PointsCounter = 54;
+    public const int Release = 1;
+    public const int SelfDestructTimer = 2;
+    public const int View = 3;
+    public const int ViewPath = 4;
+    public const int ViewPrefab = 5;
+    public const int Id = 6;
+    public const int SpriteRenderer = 7;
+    public const int Transform = 8;
+    public const int WorldPosition = 9;
+    public const int BulletCube = 10;
+    public const int DirectionShot = 11;
+    public const int GunCube = 12;
+    public const int RotationCube = 13;
+    public const int ShotReady = 14;
+    public const int SpawnShotTimer = 15;
+    public const int SpawnShotTimerInterval = 16;
+    public const int AddCube = 17;
+    public const int AllCube = 18;
+    public const int Block = 19;
+    public const int BlockColliding = 20;
+    public const int BlockTypeId = 21;
+    public const int ChangingLayer = 22;
+    public const int Cube = 23;
+    public const int SpawnPoint = 24;
+    public const int SpawnReady = 25;
+    public const int SpawnTimer = 26;
+    public const int SpawnTimerInterval = 27;
+    public const int Crosshair = 28;
+    public const int MaxDistanceShoot = 29;
+    public const int Shoot = 30;
+    public const int DestructCubes = 31;
+    public const int Hero = 32;
+    public const int HeroAnimator = 33;
+    public const int Jump = 34;
+    public const int JumpHeight = 35;
+    public const int MaxHeightHero = 36;
+    public const int Gravity = 37;
+    public const int HorizontalDirection = 38;
+    public const int Moving = 39;
+    public const int Rigidbody = 40;
+    public const int RotationSpeed = 41;
+    public const int Speed = 42;
+    public const int TurnedAlongDirection = 43;
+    public const int VerticalDirection = 44;
+    public const int CircleOffsetX = 45;
+    public const int CircleOffsetY = 46;
+    public const int Ground = 47;
+    public const int GroundLayerMask = 48;
+    public const int RadiusCastTargets = 49;
+    public const int RadiusGroundCheck = 50;
+    public const int ReadyToCollectTargets = 51;
+    public const int TargetLayerMask = 52;
+    public const int Targets = 53;
+    public const int TargetsBuffer = 54;
+    public const int AccelerationInput = 55;
+    public const int AxisInput = 56;
+    public const int HammerAttackInput = 57;
+    public const int Input = 58;
+    public const int JumpInput = 59;
+    public const int ShootInput = 60;
+    public const int PointsCounter = 61;
 
-    public const int TotalComponents = 55;
+    public const int TotalComponents = 62;
 
     public static readonly string[] componentNames = {
         "Destructed",
+        "Release",
         "SelfDestructTimer",
         "View",
         "ViewPath",
@@ -76,6 +84,13 @@ public static class GameComponentsLookup {
         "SpriteRenderer",
         "Transform",
         "WorldPosition",
+        "BulletCube",
+        "DirectionShot",
+        "GunCube",
+        "RotationCube",
+        "ShotReady",
+        "SpawnShotTimer",
+        "SpawnShotTimerInterval",
         "AddCube",
         "AllCube",
         "Block",
@@ -83,7 +98,6 @@ public static class GameComponentsLookup {
         "BlockTypeId",
         "ChangingLayer",
         "Cube",
-        "EnemyBlock",
         "SpawnPoint",
         "SpawnReady",
         "SpawnTimer",
@@ -126,6 +140,7 @@ public static class GameComponentsLookup {
 
     public static readonly System.Type[] componentTypes = {
         typeof(Code.Common.Destructed),
+        typeof(Code.Common.Release),
         typeof(Code.Common.SelfDestructTimer),
         typeof(Code.Common.View),
         typeof(Code.Common.ViewPath),
@@ -134,6 +149,13 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Common.SpriteRendererComponent),
         typeof(Code.Gameplay.Common.TransformComponent),
         typeof(Code.Gameplay.Common.WorldPosition),
+        typeof(Code.Gameplay.Features.Armaments.BulletCube),
+        typeof(Code.Gameplay.Features.Armaments.DirectionShot),
+        typeof(Code.Gameplay.Features.Armaments.GunCube),
+        typeof(Code.Gameplay.Features.Armaments.RotationCube),
+        typeof(Code.Gameplay.Features.Armaments.ShotReady),
+        typeof(Code.Gameplay.Features.Armaments.SpawnShotTimer),
+        typeof(Code.Gameplay.Features.Armaments.SpawnShotTimerInterval),
         typeof(Code.Gameplay.Features.Block.AddCube),
         typeof(Code.Gameplay.Features.Block.AllCube),
         typeof(Code.Gameplay.Features.Block.Block),
@@ -141,7 +163,6 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Block.BlockTypeIdComponent),
         typeof(Code.Gameplay.Features.Block.ChangingLayer),
         typeof(Code.Gameplay.Features.Block.Cube),
-        typeof(Code.Gameplay.Features.Block.EnemyBlock),
         typeof(Code.Gameplay.Features.Block.SpawnPoint),
         typeof(Code.Gameplay.Features.Block.SpawnReady),
         typeof(Code.Gameplay.Features.Block.SpawnTimer),

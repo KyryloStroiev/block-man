@@ -29,23 +29,19 @@ namespace Code.Gameplay.Features.Hero
             foreach (GameEntity input in _inputs)
             {
                 
-                    foreach (Collider2D collider in BlockIsTarget(damageDealer))
-                    {
-                        GameObject obj = collider.gameObject;
-                        Object.Destroy(obj);
-                        damageDealer.ReplaceDestructCubes(damageDealer.DestructCubes + 1);
-                    }
-                    damageDealer.HeroAnimator.PlayAttackHammer();
-                    
+                if (BlockIsTarget(damageDealer) != null)
+                {
+                    GameObject obj = BlockIsTarget(damageDealer).gameObject;
+                    Object.Destroy(obj, 0.1f);
+                    damageDealer.ReplaceDestructCubes(damageDealer.DestructCubes + 1);
+                }
+                damageDealer.HeroAnimator.PlayAttackHammer();
             }
         }
 
-        private Collider2D[] BlockIsTarget(GameEntity damageDealer)
-        {
-            Collider2D[] colliders = _physicsService.CircleCastCollider(damageDealer.WorldPosition,
+        private Collider2D BlockIsTarget(GameEntity damageDealer) =>
+            _physicsService.CircleCastCollider(damageDealer.WorldPosition,
                 damageDealer.CircleOffsetX * damageDealer.SpriteRenderer.transform.localScale.x, damageDealer.RadiusCastTargets,
                 damageDealer.TargetLayerMask);
-            return colliders;
-        }
     }
 }

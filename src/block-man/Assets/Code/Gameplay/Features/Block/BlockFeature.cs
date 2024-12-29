@@ -7,7 +7,7 @@ public sealed class BlockFeature : Feature
     {
         Add(systems.Create<InitializeSpawnTimer>());
         
-        Add(systems.Create<AddToListCubeSystem>());
+        Add(systems.Create<CheckCubeList>());
         Add(systems.Create<UpdateSpawnPointPositionSystem>());
         Add(systems.Create<UpdateSpawnTimerSystem>());
         Add(systems.Create<AccelerationSpeedBlockSystem>());

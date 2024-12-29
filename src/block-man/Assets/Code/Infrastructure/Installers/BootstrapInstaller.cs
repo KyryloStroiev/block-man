@@ -3,6 +3,7 @@ using Code.Gameplay.Common.CollisionRegistry;
 using Code.Gameplay.Common.PhysicsService;
 using Code.Gameplay.Common.Random;
 using Code.Gameplay.Common.Time;
+using Code.Gameplay.Features.Armaments.Factory;
 using Code.Gameplay.Features.Block.Factory;
 using Code.Gameplay.Features.Hero.Factory;
 using Code.Gameplay.Input;
@@ -70,6 +71,7 @@ public class BootstrapInstaller : MonoInstaller, IInitializable, ICoroutineRunne
        Container.Bind<IEntityViewFactory>().To<EntityViewFactory>().AsSingle();
        Container.Bind<IBlockFactory>().To<BlockFactory>().AsSingle();
        Container.Bind<IHeroFactory>().To<HeroFactory>().AsSingle();
+       Container.Bind<IArmamentsFactory>().To<ArmamentsFactory>().AsSingle();
     }
 
     private void BindContext()

@@ -47,6 +47,7 @@ namespace Code.Gameplay.Features.Block.Systems
         {
             foreach (GameObject cube in block.Cube)
             {
+                
                 if (OverlapCircle(block, cube.transform) > 0)
                     return true;
             }

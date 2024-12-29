@@ -27,7 +27,7 @@ namespace Code.Gameplay.Features.TargetCollection.Systems
         
         private int TargetInRadius(GameEntity crosshair) => 
             _physicsService
-                .CircleCast(crosshair.WorldPosition, 0, 1, 0.1f, crosshair.TargetLayerMask)
+                .CircleCastEntity(crosshair.WorldPosition, 0, 1, 0.1f, crosshair.TargetLayerMask)
                 .Select(x=>x.Id)
                 .FirstOrDefault();
     }

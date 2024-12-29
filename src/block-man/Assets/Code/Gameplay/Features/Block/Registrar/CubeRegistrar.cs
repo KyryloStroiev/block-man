@@ -18,7 +18,10 @@ namespace Code.Gameplay.Features.Block.Registrar
         public override void UnregisterComponents()
         {
             if (Entity.hasCube)
+            {
                 Entity.RemoveCube();
+            }
+                
         }
     }
 }

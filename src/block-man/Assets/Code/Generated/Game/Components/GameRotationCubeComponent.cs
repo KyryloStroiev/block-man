@@ -8,17 +8,17 @@
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherEnemyBlock;
+    static Entitas.IMatcher<GameEntity> _matcherRotationCube;
 
-    public static Entitas.IMatcher<GameEntity> EnemyBlock {
+    public static Entitas.IMatcher<GameEntity> RotationCube {
         get {
-            if (_matcherEnemyBlock == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.EnemyBlock);
+            if (_matcherRotationCube == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.RotationCube);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherEnemyBlock = matcher;
+                _matcherRotationCube = matcher;
             }
 
-            return _matcherEnemyBlock;
+            return _matcherRotationCube;
         }
     }
 }
@@ -33,18 +33,18 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly Code.Gameplay.Features.Block.EnemyBlock enemyBlockComponent = new Code.Gameplay.Features.Block.EnemyBlock();
+    static readonly Code.Gameplay.Features.Armaments.RotationCube rotationCubeComponent = new Code.Gameplay.Features.Armaments.RotationCube();
 
-    public bool isEnemyBlock {
-        get { return HasComponent(GameComponentsLookup.EnemyBlock); }
+    public bool isRotationCube {
+        get { return HasComponent(GameComponentsLookup.RotationCube); }
         set {
-            if (value != isEnemyBlock) {
-                var index = GameComponentsLookup.EnemyBlock;
+            if (value != isRotationCube) {
+                var index = GameComponentsLookup.RotationCube;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : enemyBlockComponent;
+                            : rotationCubeComponent;
 
                     AddComponent(index, component);
                 } else {

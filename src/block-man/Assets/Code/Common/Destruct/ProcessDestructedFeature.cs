@@ -9,7 +9,7 @@ namespace Code.Common.Destruct
         {
             Add(systems.Create<SelfDestructTimerSystem>());
             
-            //Add(systems.Create<CleanupGameDestructViewSystem>());
+            Add(systems.Create<CleanupGameDestructViewSystem>());
             Add(systems.Create<CleanupGameDestructSystem>());
             
         }

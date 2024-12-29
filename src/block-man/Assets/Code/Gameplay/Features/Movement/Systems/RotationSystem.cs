@@ -1,6 +1,5 @@
-using Code.Gameplay.Common.Time;
+using Code.Common;
 using Entitas;
-using UnityEngine;
 
 namespace Code.Gameplay.Features.Movement.Systems
 {
@@ -11,15 +10,20 @@ namespace Code.Gameplay.Features.Movement.Systems
         public RotationSystem(GameContext game)
         {
             _cubes = game.GetGroup(GameMatcher
-                .AllOf(GameMatcher.RotationSpeed, GameMatcher.Rigidbody));
+                .AllOf(GameMatcher.RotationSpeed,
+                    GameMatcher.Rigidbody));
         }
 
         public void Execute()
         {
             foreach (GameEntity cube in _cubes)
-            { 
+            {
+                
                 cube.Rigidbody.angularVelocity = cube.RotationSpeed;
+                    
             }
         }
+
+      
     }
 }

@@ -16,12 +16,18 @@ namespace Code.Gameplay.Common.PhysicsService
         {
             _collisionRegistry = collisionRegistry;
         }
-        public int CircleCastGround(Vector3 position, float circleOffsetY, float circleRadius, int layerMask)
+        public int CircleCastEntity(Vector3 position, float circleOffsetY, float circleRadius, int layerMask)
         {
             Vector2 playerCenter = (Vector2)position + new Vector2(0.0f, circleOffsetY);
             
             return Physics2D.OverlapCircleAll(playerCenter, circleRadius, layerMask).Length;
             
+        }
+        public int CircleCastEntity(Vector3 position, float circleOffsetY, float circleRadius)
+        {
+            Vector2 playerCenter = (Vector2)position + new Vector2(0.0f, circleOffsetY);
+            
+            return Physics2D.OverlapCircleAll(playerCenter, circleRadius).Length;
             
         }
 
@@ -62,14 +68,25 @@ namespace Code.Gameplay.Common.PhysicsService
 
         }
 
-        public Collider2D[] CircleCastCollider(Vector3 position, float circleOffsetX, float circleRadius, int layerMask)
+        public Collider2D CircleCastCollider(Vector3 position, float circleOffsetX, float circleRadius, int layerMask)
+        {
+            Vector2 playerCenter = (Vector2)position + new Vector2(circleOffsetX, 0);
+
+            return Physics2D.OverlapCircle(playerCenter, circleRadius, layerMask);
+        }
+        
+        public Collider2D BoxCastCollider(Transform transform, int layerMask) => 
+            Physics2D.OverlapBox(transform.position, transform.localScale, transform.eulerAngles.z, layerMask);
+
+        public Collider2D[] CircleCastAllCollider(Vector3 position, float circleOffsetX, float circleRadius, int layerMask)
         {
             Vector2 playerCenter = (Vector2)position + new Vector2(circleOffsetX, 0);
 
             return Physics2D.OverlapCircleAll(playerCenter, circleRadius, layerMask);
         }
+        
 
-        public IEnumerable<GameEntity> CircleCast(Vector3 worldPosition, float circleOffsetX, float scaleHeroX, float radius, int layerMask)
+        public IEnumerable<GameEntity> CircleCastEntity(Vector3 worldPosition, float circleOffsetX, float scaleHeroX, float radius, int layerMask)
         {
             Vector2 positionCircle = (Vector2)worldPosition + new Vector2(circleOffsetX * scaleHeroX, 0.0f);
             

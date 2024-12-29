@@ -35,7 +35,7 @@ namespace Code.Infrastructure.View.Factory
            
             EntityBehaviour view = _instantiator.InstantiatePrefabForComponent<EntityBehaviour>(
                 entity.ViewPrefab,
-                position: _farAway,
+                position: entity.WorldPosition,
                 Quaternion.identity, 
                 parentTransform: null);
             

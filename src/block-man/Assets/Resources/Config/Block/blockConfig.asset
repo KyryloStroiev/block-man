@@ -140,7 +140,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   Speed: 1
-  AccelerationSpeed: 3
-  SpawnTimerInterval: 5
+  AccelerationSpeed: 10
+  SpawnTimerInterval: 4
   CircleGroundRadius: 0.53
   SpawnPointPrefab: {fileID: 7638552371556107666, guid: d34528707ca5fe946a93f9492ef7dbd6, type: 3}

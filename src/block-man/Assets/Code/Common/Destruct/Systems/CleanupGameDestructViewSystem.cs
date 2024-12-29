@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using Entitas;
-using Object = UnityEngine.Object;
+using UnityEngine;
 
 namespace Code.Common.Destruct.Systems
 {
@@ -13,8 +12,8 @@ namespace Code.Common.Destruct.Systems
         public CleanupGameDestructViewSystem(GameContext game)
         {
             _entities = game.GetGroup(GameMatcher
-                .AllOf(GameMatcher.View,
-                    GameMatcher.Destructed));
+                .AllOf(GameMatcher.Destructed,
+                    GameMatcher.View));
         }
 
         public void Cleanup()

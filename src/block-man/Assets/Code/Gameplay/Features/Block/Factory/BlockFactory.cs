@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Code.Common.Entity;
 using Code.Common.Extensions;
+using Code.Gameplay.Features.Block.Configs;
 using Code.Gameplay.StaticData;
 using Code.Infrastructure.Identifiers;
 using Code.Infrastructure.View;
@@ -32,30 +33,14 @@ namespace Code.Gameplay.Features.Block.Factory
                 .AddViewPrefab(PrefabBlockId(typeId))
                 .AddVerticalDirection(-1)
                 .AddCircleOffsetY(0)
-                .AddTargetLayerMask(CollisionLayer.Cube.AsMask())
+                .AddTargetLayerMask(CollisionLayer.Cube.AsMask()) 
                 .AddRadiusGroundCheck(_blockConfig.CircleGroundRadius)
                 .With(x=>x.isBlock = true)
                 .With(x=>x.isMoving = true);
            
         }
         
-        public GameEntity CreateEnemyBlock(BlockTypeId typeId, Vector3 at, float verticalDirection)
-        {
-            return CreateEntity.Empty()
-                .AddId(_identifiers.NextId())
-                .AddBlockTypeId(typeId)
-                .AddWorldPosition(at)
-                .AddSpeed(_blockConfig.Speed)
-                .AddViewPrefab(PrefabBlockId(typeId))
-                .AddVerticalDirection(verticalDirection)
-                .AddCircleOffsetY(0)
-                .AddRotationSpeed(_blockConfig.RotationSpeed)
-                .AddTargetLayerMask(CollisionLayer.Cube.AsMask())
-                .AddRadiusGroundCheck(_blockConfig.CircleGroundRadius)
-                .With(x=>x.isEnemyBlock = true)
-                .With(x=>x.isMoving = true);
-           
-        }
+       
         
 
         public GameEntity CreateListCube()

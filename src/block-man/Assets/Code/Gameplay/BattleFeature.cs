@@ -1,4 +1,5 @@
 using Code.Common.Destruct;
+using Code.Gameplay.Features.Armaments;
 using Code.Gameplay.Features.Hero;
 using Code.Gameplay.Features.Movement;
 using Code.Gameplay.Features.TargetCollection;
@@ -20,6 +21,7 @@ namespace Code.Gameplay
             Add(systems.Create<CollectTargetsFeature>());
             Add(systems.Create<HeroFeature>());
             Add(systems.Create<BlockFeature>());
+            Add(systems.Create<ArmamentsFeature>());
             Add(systems.Create<UIFeature>());
             
             Add(systems.Create<ProcessDestructedFeature>());

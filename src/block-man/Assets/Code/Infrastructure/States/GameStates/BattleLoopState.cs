@@ -11,12 +11,14 @@ namespace Code.Infrastructure.States.GameStates
     {
         private readonly ISystemFactory _systems;
         private readonly IInputService _inputService;
+        private readonly GameContext _gameContext;
         private BattleFeature _battleFeature;
 
-        public BattleLoopState(ISystemFactory systems, IInputService inputService)
+        public BattleLoopState(ISystemFactory systems, IInputService inputService, GameContext gameContext)
         {
             _systems = systems;
             _inputService = inputService;
+            _gameContext = gameContext;
         }
         public void Enter()
         {
@@ -48,6 +50,10 @@ namespace Code.Infrastructure.States.GameStates
 
         private void DestructEntities()
         {
+            foreach (GameEntity entity in _gameContext.GetEntities())
+            {
+                entity.isDestructed = true;
+            }
         }
     }
 }

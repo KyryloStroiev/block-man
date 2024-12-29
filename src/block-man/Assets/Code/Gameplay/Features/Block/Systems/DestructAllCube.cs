@@ -12,16 +12,14 @@ namespace Code.Gameplay.Features.Block.Systems
         {
             _allCubes = game.GetGroup(GameMatcher
                 .AllOf(GameMatcher.AllCube));
-            _inputs = game.GetGroup(GameMatcher
-                .AllOf(GameMatcher.Input));
+            
         }
 
         public void Cleanup()
         {
             foreach (GameEntity allCube in _allCubes)
-            foreach (GameEntity input in _inputs)
             {
-                if (input.isAccelerationInput)
+                if (UnityEngine.Input.GetKeyDown(KeyCode.E))
                 {
                     
                     foreach (GameObject cube in allCube.AllCube)
