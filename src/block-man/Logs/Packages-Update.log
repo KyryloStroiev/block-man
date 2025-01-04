@@ -68,3 +68,11 @@ Update Mode: updateDependencies
 The following packages were updated:
   com.unity.inputsystem from version 1.11.1 to 1.11.2
   com.unity.visualscripting from version 1.9.4 to 1.9.5
+
+=== Mon Dec 30 18:31:11 2024
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.collab-proxy from version 2.5.2 to 2.6.0
