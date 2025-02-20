@@ -1,4 +1,6 @@
-﻿namespace Code.Gameplay.Input.Service
+﻿using UnityEngine;
+
+namespace Code.Gameplay.Input.Service
 {
     public interface IInputService
     {
@@ -9,5 +11,7 @@
         bool GetButtonHammerAttack();
         bool GetButtonShoot();
         bool GetButtonAcceleration();
+        Vector2 JoystickAxis();
+        void Test();
     }
 }

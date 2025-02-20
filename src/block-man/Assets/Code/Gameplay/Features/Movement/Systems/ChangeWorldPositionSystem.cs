@@ -39,9 +39,9 @@ namespace Code.Gameplay.Features.Movement.Systems
 
         private Vector2 Direction(GameEntity entity)
         {
-            if (!entity.isMoving || RaycastCast(entity) )
+            /*if (!entity.isMoving || RaycastCast(entity) )
                 return new Vector2(0, entity.VerticalDirection);
-            else
+            else*/
                 return new Vector2(entity.HorizontalDirection * entity.Speed , entity.VerticalDirection );
         }
         
@@ -49,4 +49,5 @@ namespace Code.Gameplay.Features.Movement.Systems
             _physicsService.RaycastCast(hero.WorldPosition, new Vector2(hero.HorizontalDirection, 0f), RaycastDistance, hero.GroundLayerMask);
            
     }
-}
+    
+    }

@@ -23,10 +23,24 @@ namespace Code.Gameplay.Features.Hero
             foreach (GameEntity input in _inputs)
             foreach (GameEntity hero in _heroes)
             {
-                hero.isMoving = input.hasAxisInput;
-                
-                if(input.hasAxisInput)
+
+                if (input.hasAxisInput)
+                {
                     hero.ReplaceHorizontalDirection(input.AxisInput);
+                    
+                    if (Mathf.Abs(input.AxisInput) > 0.01f)
+                    {
+                        hero.ReplaceLastDirection(input.AxisInput);
+                    }
+                }
+                else if (input.isShootInput)
+                {
+                    hero.ReplaceHorizontalDirection(0);
+                }
+                else
+                {
+                    hero.ReplaceHorizontalDirection(0);
+                }
                 
             }
         }

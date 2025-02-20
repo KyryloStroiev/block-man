@@ -2,7 +2,6 @@
 using Code.Gameplay.Common;
 using Code.Gameplay.Common.PhysicsService;
 using Entitas;
-using UnityEngine;
 
 namespace Code.Gameplay.Features.Hero
 {
@@ -19,7 +18,8 @@ namespace Code.Gameplay.Features.Hero
                 .AllOf(
                     GameMatcher.Transform,
                     GameMatcher.VerticalDirection,
-                    GameMatcher.JumpHeight));
+                    GameMatcher.JumpHeight,
+                    GameMatcher.HeroAnimator));
             _inputs = game.GetGroup(GameMatcher
                 .AllOf(GameMatcher.Input,
                     GameMatcher.JumpInput).NoneOf(GameMatcher.ShootInput));
@@ -34,10 +34,12 @@ namespace Code.Gameplay.Features.Hero
                 {
                     hero.isJump = true;
                     hero.ReplaceVerticalDirection(JumpHeight(hero));
+                    hero.HeroAnimator.PlayJump();
                 }
                 else
                 {
                     hero.isJump = false;
+                    
                 }
             }
         }

@@ -16,21 +16,14 @@ namespace Code.Gameplay.Common.PhysicsService
         {
             _collisionRegistry = collisionRegistry;
         }
-        public int CircleCastEntity(Vector3 position, float circleOffsetY, float circleRadius, int layerMask)
+        public int CircleCast(Vector3 position, float circleOffsetY, float circleRadius, int layerMask)
         {
             Vector2 playerCenter = (Vector2)position + new Vector2(0.0f, circleOffsetY);
             
             return Physics2D.OverlapCircleAll(playerCenter, circleRadius, layerMask).Length;
             
         }
-        public int CircleCastEntity(Vector3 position, float circleOffsetY, float circleRadius)
-        {
-            Vector2 playerCenter = (Vector2)position + new Vector2(0.0f, circleOffsetY);
-            
-            return Physics2D.OverlapCircleAll(playerCenter, circleRadius).Length;
-            
-        }
-
+        
         public bool RaycastCast(Vector2 position, Vector2 raycastDirection, float raycastDistance, int layerMask)
         {
             
@@ -39,35 +32,15 @@ namespace Code.Gameplay.Common.PhysicsService
             return hit;
         }
         
-        public bool RaycastCastVertical(Vector2 position, float raycastDirection, float raycastDistance, int layerMask)
+        public bool RaycastCast(Vector2 position, Vector2 raycastDirection, float circleOffsetY, float raycastDistance, int layerMask)
         {
-            Vector2 direction = new Vector2(0, raycastDirection);
-            
-            RaycastHit2D hit = Physics2D.Raycast(position, direction, raycastDistance, layerMask);
-            Debug.DrawRay(position, direction * raycastDistance, Color.red);
+            Vector2 playerCenter = (Vector2)position + new Vector2(0, circleOffsetY);
+            RaycastHit2D hit = Physics2D.Raycast(playerCenter, raycastDirection, raycastDistance, layerMask);
+            Debug.DrawRay(playerCenter, raycastDirection * raycastDistance, Color.red);
             return hit;
         }
         
-        public int CircleCastCube(Vector3 position, float circleOffsetY, float circleRadius, int layerMask, GameObject parent)
-        {
-            Vector2 playerCenter = (Vector2)position + new Vector2(0.0f, circleOffsetY);
-            
-            Collider2D[] hits = Physics2D.OverlapCircleAll(playerCenter, circleRadius, layerMask);
-
-            int count = 0;
-
-            foreach (Collider2D hit in hits)
-            {
-                if (hit.gameObject != parent && !hit.transform.IsChildOf(parent.transform))
-                {
-                    count++;
-                }
-            }
-
-            return count;
-
-        }
-
+        
         public Collider2D CircleCastCollider(Vector3 position, float circleOffsetX, float circleRadius, int layerMask)
         {
             Vector2 playerCenter = (Vector2)position + new Vector2(circleOffsetX, 0);
@@ -77,16 +50,30 @@ namespace Code.Gameplay.Common.PhysicsService
         
         public Collider2D BoxCastCollider(Transform transform, int layerMask) => 
             Physics2D.OverlapBox(transform.position, transform.localScale, transform.eulerAngles.z, layerMask);
-
-        public Collider2D[] CircleCastAllCollider(Vector3 position, float circleOffsetX, float circleRadius, int layerMask)
-        {
-            Vector2 playerCenter = (Vector2)position + new Vector2(circleOffsetX, 0);
-
-            return Physics2D.OverlapCircleAll(playerCenter, circleRadius, layerMask);
-        }
         
+        public int BoxCast(Transform transform, int layerMask) => 
+            Physics2D.OverlapBoxAll(transform.position, transform.localScale, transform.eulerAngles.z, layerMask).Length;
 
-        public IEnumerable<GameEntity> CircleCastEntity(Vector3 worldPosition, float circleOffsetX, float scaleHeroX, float radius, int layerMask)
+        public int BoxCastParents(Transform transform, int layerMask)
+        {
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(transform.position, transform.localScale, transform.eulerAngles.z, layerMask);
+            
+            List<Collider2D> filteredColliders = new List<Collider2D>();
+
+            foreach (Collider2D collider in colliders)
+            {
+                if (collider.transform.parent != transform.parent)
+                {
+                    filteredColliders.Add(collider);
+                }
+            }
+            
+            return filteredColliders.Count;
+        }
+            
+
+        
+        public IEnumerable<GameEntity> CircleCast(Vector3 worldPosition, float circleOffsetX, float scaleHeroX, float radius, int layerMask)
         {
             Vector2 positionCircle = (Vector2)worldPosition + new Vector2(circleOffsetX * scaleHeroX, 0.0f);
             

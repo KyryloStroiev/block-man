@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Code.Gameplay.Features.Block.Systems
 {
-    public class DestructAllCube : ICleanupSystem
+    public class DestructAllCube : ITearDownSystem
     {
         private readonly IGroup<GameEntity> _allCubes;
         private readonly IGroup<GameEntity> _inputs;
@@ -15,20 +15,22 @@ namespace Code.Gameplay.Features.Block.Systems
             
         }
 
-        public void Cleanup()
+        
+        public void Initialize()
+        {
+            
+        }
+
+        public void TearDown()
         {
             foreach (GameEntity allCube in _allCubes)
             {
-                if (UnityEngine.Input.GetKeyDown(KeyCode.E))
+                foreach (GameObject cube in allCube.AllCube)
                 {
-                    
-                    foreach (GameObject cube in allCube.AllCube)
-                    {
-                        Object.Destroy(cube);
-                    }
+                    Object.Destroy(cube);
                 }
             }
         }
-        
+            
     }
 }

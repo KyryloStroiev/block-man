@@ -10,6 +10,8 @@ namespace Code.Gameplay.Features.Crosshair
             Add(systems.Create<UpdateCrosshairPositionSystem>());
             Add(systems.Create<BlockFollowsCrosshairSystem>());
             Add(systems.Create<RotationBlockSystem>());
+            Add(systems.Create<CalculateCrosshairAngleSystem>());
+            //Add(systems.Create<HideCrosshairTargetSystem>());
         }
     }
 }

@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6445240802041768094}
   - component: {fileID: -6475868212196050025}
   - component: {fileID: 4787413397551878231}
-  - component: {fileID: -5039754735181080220}
-  - component: {fileID: 6437338231839581057}
+  - component: {fileID: 2282840504495183295}
+  - component: {fileID: -6858474534515466425}
   m_Layer: 9
   m_Name: S_Block
   m_TagString: Untagged
@@ -82,6 +82,12 @@ MonoBehaviour:
   GroundLayerMask:
     serializedVersion: 2
     m_Bits: 192
+  TargetLayerMask:
+    serializedVersion: 2
+    m_Bits: 5376
+  ObstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!114 &4787413397551878231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,7 +106,7 @@ MonoBehaviour:
   - {fileID: 1807418375454372748}
   - {fileID: 1223125987169797463}
   - {fileID: 395177298628153746}
---- !u!50 &-5039754735181080220
+--- !u!50 &2282840504495183295
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -127,7 +133,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &6437338231839581057
+--- !u!114 &-6858474534515466425
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EntityView: {fileID: 6445240802041768094}
-  Rigidbody: {fileID: -5039754735181080220}
+  Rigidbody: {fileID: 2282840504495183295}
 --- !u!1001 &1227298743511559706
 PrefabInstance:
   m_ObjectHideFlags: 0

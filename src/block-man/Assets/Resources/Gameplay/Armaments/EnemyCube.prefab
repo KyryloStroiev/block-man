@@ -11,10 +11,8 @@ GameObject:
   - component: {fileID: 5593690499050577264}
   - component: {fileID: 8142475181504527743}
   - component: {fileID: 4167891099665055752}
-  - component: {fileID: 7344254893456156717}
   - component: {fileID: 1874983231508530279}
   - component: {fileID: -4862000045915131764}
-  - component: {fileID: -7960379110168479862}
   - component: {fileID: 4256406035484243005}
   - component: {fileID: 3913925318451495716}
   m_Layer: 11
@@ -140,33 +138,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &7344254893456156717
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8406516007812711959}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &1874983231508530279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,20 +163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EntityView: {fileID: 1874983231508530279}
---- !u!114 &-7960379110168479862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8406516007812711959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b85f56c2044251a5a144098189c340, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EntityView: {fileID: 1874983231508530279}
-  Rigidbody: {fileID: 7344254893456156717}
 --- !u!114 &4256406035484243005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,6 +179,9 @@ MonoBehaviour:
   GroundLayerMask:
     serializedVersion: 2
     m_Bits: 1984
+  TargetLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!114 &3913925318451495716
 MonoBehaviour:
   m_ObjectHideFlags: 0

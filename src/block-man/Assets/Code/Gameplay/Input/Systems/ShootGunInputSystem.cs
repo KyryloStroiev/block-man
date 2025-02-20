@@ -1,5 +1,6 @@
 using Code.Gameplay.Input.Service;
 using Entitas;
+using UnityEngine;
 
 namespace Code.Gameplay.Input.Systems
 {
@@ -19,7 +20,13 @@ namespace Code.Gameplay.Input.Systems
         {
             foreach (GameEntity input in _inputs)
             {
-                input.isShootInput = _inputService.GetButtonShoot();
+
+                //input.isShootInput = _inputService.GetButtonShoot();
+               
+                if (_inputService.GetButtonShoot())
+                input.ReplaceAimPosition(_inputService.JoystickAxis());
+                else if (input.hasAimPosition)
+                    input.RemoveAimPosition();
             }
         }
     }

@@ -17,5 +17,6 @@ namespace Code.Common.Extensions
         CubeOnGround = 7,
         Cube = 8,
         Block = 9,
+        Hero = 12,
     }
 }

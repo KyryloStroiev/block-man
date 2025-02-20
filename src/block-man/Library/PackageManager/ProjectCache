@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638711730712957512
+      ticks: 638736818310564320
     m_Hash: 3098684705
   m_LockFileStatus:
     m_FilePath: D:/src_Unity/block-man/src/block-man/Packages/packages-lock.json
@@ -13,14 +13,14 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638711730738520522
+      ticks: 638736818310614827
     m_Hash: 1884832581
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: D:/src_Unity/block-man/src/block-man/Packages
-m_EditorVersion: 6000.0.32f1 (b2e806cf271c)
+m_EditorVersion: 6000.0.34f1 (5ab2d9ed9190)
 m_ResolvedPackages:
 - packageId: com.unity.collab-proxy@2.6.0
   testable: 0
@@ -640,8 +640,10 @@ m_ResolvedPackages:
     - 1.11.0
     - 1.11.1
     - 1.11.2
+    - 1.12.0
     compatible:
     - 1.11.2
+    - 1.12.0
     recommended: 1.11.2
     deprecated: []
   dependencies:
@@ -4912,10 +4914,13 @@ m_ResolvedPackages:
     - 1.1.5
     - 1.1.6
     - 1.1.7
+    - 1.1.8
     - 1.2.0
+    - 1.2.1
     compatible:
     - 1.1.7
-    recommended: 1.1.7
+    - 1.1.8
+    recommended: 1.1.8
     deprecated: []
   dependencies:
   - name: com.unity.2d.common
@@ -5335,9 +5340,11 @@ m_ResolvedPackages:
     - 2.5.0-exp.1
     - 2.5.0-pre.2
     - 2.5.1
+    - 2.5.2
     compatible:
     - 2.5.1
-    recommended: 2.5.1
+    - 2.5.2
+    recommended: 2.5.2
     deprecated: []
   dependencies:
   - name: com.unity.burst
@@ -5564,9 +5571,11 @@ m_ResolvedPackages:
     - 1.8.16
     - 1.8.17
     - 1.8.18
+    - 1.8.19
     compatible:
     - 1.8.18
-    recommended: 1.8.18
+    - 1.8.19
+    recommended: 1.8.19
     deprecated: []
   dependencies:
   - name: com.unity.mathematics
@@ -5663,9 +5672,11 @@ m_ResolvedPackages:
     - 1.10.1
     - 1.10.2
     - 1.11.4
+    - 1.11.5
     compatible:
     - 1.11.4
-    recommended: 1.11.4
+    - 1.11.5
+    recommended: 1.11.5
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -5844,4 +5855,4 @@ m_ResolvedPackages:
     compatibilityLevel: 0
     minimumPackageVersion: 3.0.3
     minimumUnityVersion: 2020.3.0a1
-m_BuiltInPackagesHash: 02ccae8a6fea3b773b91b78f7a8d92680a6ca369
+m_BuiltInPackagesHash: 4cede7dc3c62c0ecb7c01d560270343cdcbdf8f3

@@ -25,10 +25,12 @@ namespace Code.Gameplay.Features.Crosshair.Systems
                     if (crosshair.Targets != 0)
                     {
                         GameEntity target = _game.GetEntityWithId(crosshair.Targets);
-                        
-                        target.ReplaceWorldPosition(crosshair.WorldPosition);
-                        
-                        
+
+                        if (target != null)
+                        {
+                            target.ReplaceWorldPosition(crosshair.WorldPosition);
+                        }
+                       
                     }
             }
         }

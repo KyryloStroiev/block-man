@@ -9,4 +9,5 @@ namespace Code.Gameplay.Input
    [Game] public class AccelerationInput: IComponent {  }
    [Game] public class ShootInput: IComponent {  }
    [Game] public class AxisInput: IComponent { public float Value; }
+   [Game] public class AimPosition: IComponent { public Vector2 Value; }
 }

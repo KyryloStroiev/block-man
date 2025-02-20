@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c07c32793df645a894c7fc9793ee15e6, type: 3}
+  m_Name: UIElements
+  m_EditorClassIdentifier: 
+  FlagPrefab: {fileID: 4029682653931380867, guid: 6866c963918a6f946bc7f7ce9907598f, type: 3}
+  GameplayHUD: {fileID: 4255542770019208150, guid: b53f774599d09d34383dad78e60f43c1, type: 3}
+  HomeHUD: {fileID: 0}

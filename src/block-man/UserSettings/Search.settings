@@ -9,9 +9,9 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.66F56946" = "input actio"
+	"last_search.66F56946" = "animatio"
 	"OpenInspectorPreview.66F56946" = "0"
-	"currentGroup.66F56946" = null
+	"currentGroup.66F56946" = "menu"
 }
 providers = {
 	asset = {
@@ -68,6 +68,11 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"TI"
+	"ti"
+	"t"
+	"штзге"
+	"an"
 ]
 searchItemFavorites = [
 ]

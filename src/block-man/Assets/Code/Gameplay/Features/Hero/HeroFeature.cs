@@ -13,12 +13,13 @@ namespace Code.Gameplay.Features.Hero
             Add(systems.Create<SetHeroDirectionBuInputSystem>());
             Add(systems.Create<JumpHeroSystem>());
             Add(systems.Create<AttackHammerHeroSystem>());
-            Add(systems.Create<AnimateHeroMovementSystem>());
+            Add(systems.Create<AnimateHeroSystem>());
+            Add(systems.Create<AnimateShootHeroSystem>());
             Add(systems.Create<TurnAlongDirectionSystem>());
-            Add(systems.Create<CrosshairFeature>());
             Add(systems.Create<ShootHeroSystem>());
             Add(systems.Create<CameraFollowHeroSystem>());
             Add(systems.Create<UpdateMaxHeightHeroSystem>());
+            Add(systems.Create<ObstacleCheckerSystem>());
             
         }
     }

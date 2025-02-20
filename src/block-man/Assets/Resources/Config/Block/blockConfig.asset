@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: blockConfig
   m_EditorClassIdentifier: 
   serializationData:
-    SerializedFormat: 2
-    SerializedBytes: 
+    SerializedFormat: 0
+    SerializedBytes: 01010b00000042006c006f0063006b005000720065006600610062002f0000000001aa000000530079007300740065006d002e0043006f006c006c0065006300740069006f006e0073002e00470065006e0065007200690063002e00440069006300740069006f006e00610072007900600032005b005b0043006f00640065002e00470061006d00650070006c00610079002e00460065006100740075007200650073002e0042006c006f0063006b002e0042006c006f0063006b005400790070006500490064002c00200041007300730065006d0062006c0079002d004300530068006100720070005d002c005b0043006f00640065002e0049006e006600720061007300740072007500630074007500720065002e0056006900650077002e0045006e0074006900740079004200650068006100760069006f00750072002c00200041007300730065006d0062006c0079002d004300530068006100720070005d005d002c0020006d00730063006f0072006c00690062000000000001010800000063006f006d00700061007200650072002f010000000178000000530079007300740065006d002e0043006f006c006c0065006300740069006f006e0073002e00470065006e0065007200690063002e0045006e0075006d0045007100750061006c0069007400790043006f006d0070006100720065007200600031005b005b0043006f00640065002e00470061006d00650070006c00610079002e00460065006100740075007200650073002e0042006c006f0063006b002e0042006c006f0063006b005400790070006500490064002c00200041007300730065006d0062006c0079002d004300530068006100720070005d005d002c0020006d00730063006f0072006c0069006200010000000600000000000000000705060700000000000000042e1d010200000024006b0000000000000000000b0102000000240076000000000005042e1d010200000024006b0001000000000000000b0102000000240076000100000005042e1d010200000024006b0002000000000000000b0102000000240076000200000005042e1d010200000024006b0003000000000000000b0102000000240076000300000005042e1d010200000024006b0004000000000000000b0102000000240076000400000005042e1d010200000024006b0005000000000000000b0102000000240076000500000005042e1d010200000024006b0006000000000000000b01020000002400760006000000050705
     ReferencedUnityObjects:
     - {fileID: 6445240802041768094, guid: 5d6dc98910abe7f45b4ee1277867509c, type: 3}
     - {fileID: 6445240802041768094, guid: 86ff79b4f1718794a91a9aa707ea877d, type: 3}
@@ -27,120 +27,9 @@ MonoBehaviour:
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
-    SerializationNodes:
-    - Name: BlockPrefab
-      Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[Code.Gameplay.Features.Block.BlockTypeId,
-        Assembly-CSharp],[Code.Infrastructure.View.EntityBehaviour, Assembly-CSharp]],
-        mscorlib
-    - Name: comparer
-      Entry: 7
-      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[Code.Gameplay.Features.Block.BlockTypeId,
-        Assembly-CSharp]], mscorlib
-    - Name: 
-      Entry: 12
-      Data: 0
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 12
-      Data: 7
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 0
-    - Name: $v
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 1
-    - Name: $v
-      Entry: 10
-      Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 2
-    - Name: $v
-      Entry: 10
-      Data: 2
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 3
-    - Name: $v
-      Entry: 10
-      Data: 3
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4
-    - Name: $v
-      Entry: 10
-      Data: 4
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 5
-    - Name: $v
-      Entry: 10
-      Data: 5
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 6
-    - Name: $v
-      Entry: 10
-      Data: 6
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 13
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
+    SerializationNodes: []
   Speed: 1
   AccelerationSpeed: 10
-  SpawnTimerInterval: 4
+  SpawnTimerInterval: 100
   CircleGroundRadius: 0.53
   SpawnPointPrefab: {fileID: 7638552371556107666, guid: d34528707ca5fe946a93f9492ef7dbd6, type: 3}

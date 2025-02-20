@@ -11,5 +11,6 @@ public class SceneInitializationInstaller : MonoInstaller
         {
             Container.BindInterfacesTo(initializer.GetType()).FromInstance(initializer).AsSingle();
         }
+        
     }
 }

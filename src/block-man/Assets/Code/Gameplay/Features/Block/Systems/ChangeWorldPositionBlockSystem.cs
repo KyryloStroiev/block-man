@@ -17,15 +17,17 @@ namespace Code.Gameplay.Features.Block.Systems
                     GameMatcher.WorldPosition,
                     GameMatcher.VerticalDirection,
                     GameMatcher.Block,
-                    GameMatcher.Moving));
+                    GameMatcher.Moving, 
+                    GameMatcher.Rigidbody));
         }
 
         public void Execute()
         {
             foreach (GameEntity block in _blocks)
-            {
+            { 
                 block.ReplaceWorldPosition((Vector2)block.WorldPosition +
                                            new Vector2(0, block.VerticalDirection * block.Speed * _time.DeltaTime));
+                block.Rigidbody.linearVelocityY = block.VerticalDirection * block.Speed;
             }
         }
     }
