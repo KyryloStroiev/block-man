@@ -27,6 +27,14 @@ namespace Code.Gameplay.Input.Service
             
             _input.Hero.Acceleration.performed +=_=> _isAccelerationPressed = true;
             _input.Hero.Acceleration.canceled +=_=> _isAccelerationPressed = false;
+<<<<<<< Updated upstream
+=======
+            
+            
+            
+            _input.Hero.Shoot.performed +=_=> _isShootPressed = true;
+            _input.Hero.Shoot.canceled +=_=> _isShootPressed = false;
+>>>>>>> Stashed changes
         }
         
 

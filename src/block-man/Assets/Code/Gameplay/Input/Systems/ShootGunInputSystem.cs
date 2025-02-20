@@ -19,7 +19,17 @@ namespace Code.Gameplay.Input.Systems
         {
             foreach (GameEntity input in _inputs)
             {
+<<<<<<< Updated upstream
                 input.isShootInput = _inputService.GetButtonShoot();
+=======
+
+                input.isShootInput = _inputService.GetButtonShoot();
+               
+                /*if (_inputService.GetButtonShoot())
+                input.ReplaceAimPosition(_inputService.JoystickAxis());
+                else if (input.hasAimPosition)
+                    input.RemoveAimPosition();*/
+>>>>>>> Stashed changes
             }
         }
     }

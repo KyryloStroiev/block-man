@@ -26,11 +26,22 @@ namespace Code.Gameplay.Features.Crosshair.Systems
             foreach (GameEntity hero in _heroes)
             foreach (GameEntity crosshair in _crosshairs)
             {
+<<<<<<< Updated upstream
                 crosshair.ReplaceWorldPosition(PositionMouse(hero, crosshair.MaxDistanceShoot));
             }
         }
 
         private Vector3 PositionMouse(GameEntity entity, float maxShootDistance)
+=======
+                //crosshair.ReplaceWorldPosition(PositionJoystick(crosshair, hero, input));
+                crosshair.ReplaceWorldPosition(PositionMouse(hero, crosshair));
+            }
+        }
+
+       
+        
+        private Vector3 PositionMouse(GameEntity hero, GameEntity crosshair)
+>>>>>>> Stashed changes
         {
             
             Vector3 cameraPosition = _cameraProvider.MainCamera.ScreenToWorldPoint(UnityEngine.Input.mousePosition);
@@ -47,5 +58,10 @@ namespace Code.Gameplay.Features.Crosshair.Systems
                 return cameraPosition;
             }
         }
+<<<<<<< Updated upstream
+=======
+        
+        
+>>>>>>> Stashed changes
     }
 }

@@ -119,6 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1001 &46355661
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -180,6 +181,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6007a475260be3a4d821a80f7a40f009, type: 3}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &175447052
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,6 +869,7 @@ Grid:
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 0
   m_CellSwizzle: 0
+<<<<<<< Updated upstream
 --- !u!1001 &1149193685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1058,6 +1062,12 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1395189883921252201, guid: a1a8c82e6ed584947a643d9928d08a76, type: 3}
   m_PrefabInstance: {fileID: 1313218491}
+=======
+--- !u!224 &1342026440 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 813594607319581623, guid: cd6c5c3c086c88e44af528f152f22996, type: 3}
+  m_PrefabInstance: {fileID: 8072611328401052139}
+>>>>>>> Stashed changes
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1362397084
 GameObject:
@@ -10584,8 +10594,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     m_RemovedComponents: []
     m_RemovedGameObjects: []
+=======
+    - target: {fileID: 2585164384186023606, guid: cd6c5c3c086c88e44af528f152f22996, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4769367108849595519, guid: cd6c5c3c086c88e44af528f152f22996, type: 3}
+      propertyPath: m_Name
+      value: UIRoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8936055166145101931, guid: cd6c5c3c086c88e44af528f152f22996, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 3741325991146699458, guid: cd6c5c3c086c88e44af528f152f22996, type: 3}
+>>>>>>> Stashed changes
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7849d6a9300fb464e9106b387b74c14b, type: 3}

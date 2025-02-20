@@ -71,6 +71,27 @@ public partial class @HeroControler: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+<<<<<<< Updated upstream
+=======
+                },
+                {
+                    ""name"": ""Aim"",
+                    ""type"": ""Value"",
+                    ""id"": ""544316fb-8018-4c30-b6df-a17914ee5589"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""6d0a2068-e1aa-4d4e-bb09-b0a6699cf316"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+>>>>>>> Stashed changes
                 }
             ],
             ""bindings"": [
@@ -150,6 +171,31 @@ public partial class @HeroControler: IInputActionCollection2, IDisposable
                     ""action"": ""Acceleration"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+<<<<<<< Updated upstream
+=======
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2802fbfb-c841-4e9c-8171-ed9ba2bab7f0"",
+                    ""path"": ""<Touchscreen>/primaryTouch/radius"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Aim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""02da01fa-8936-4299-8a95-efc6079b50af"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+>>>>>>> Stashed changes
                 }
             ]
         }
@@ -163,6 +209,11 @@ public partial class @HeroControler: IInputActionCollection2, IDisposable
         m_Hero_Hammer = m_Hero.FindAction("Hammer", throwIfNotFound: true);
         m_Hero_Shoot = m_Hero.FindAction("Shoot", throwIfNotFound: true);
         m_Hero_Acceleration = m_Hero.FindAction("Acceleration", throwIfNotFound: true);
+<<<<<<< Updated upstream
+=======
+        m_Hero_Aim = m_Hero.FindAction("Aim", throwIfNotFound: true);
+        m_Hero_Shoot = m_Hero.FindAction("Shoot", throwIfNotFound: true);
+>>>>>>> Stashed changes
     }
 
     ~@HeroControler()
@@ -234,6 +285,11 @@ public partial class @HeroControler: IInputActionCollection2, IDisposable
     private readonly InputAction m_Hero_Hammer;
     private readonly InputAction m_Hero_Shoot;
     private readonly InputAction m_Hero_Acceleration;
+<<<<<<< Updated upstream
+=======
+    private readonly InputAction m_Hero_Aim;
+    private readonly InputAction m_Hero_Shoot;
+>>>>>>> Stashed changes
     public struct HeroActions
     {
         private @HeroControler m_Wrapper;
@@ -243,6 +299,11 @@ public partial class @HeroControler: IInputActionCollection2, IDisposable
         public InputAction @Hammer => m_Wrapper.m_Hero_Hammer;
         public InputAction @Shoot => m_Wrapper.m_Hero_Shoot;
         public InputAction @Acceleration => m_Wrapper.m_Hero_Acceleration;
+<<<<<<< Updated upstream
+=======
+        public InputAction @Aim => m_Wrapper.m_Hero_Aim;
+        public InputAction @Shoot => m_Wrapper.m_Hero_Shoot;
+>>>>>>> Stashed changes
         public InputActionMap Get() { return m_Wrapper.m_Hero; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -267,6 +328,15 @@ public partial class @HeroControler: IInputActionCollection2, IDisposable
             @Acceleration.started += instance.OnAcceleration;
             @Acceleration.performed += instance.OnAcceleration;
             @Acceleration.canceled += instance.OnAcceleration;
+<<<<<<< Updated upstream
+=======
+            @Aim.started += instance.OnAim;
+            @Aim.performed += instance.OnAim;
+            @Aim.canceled += instance.OnAim;
+            @Shoot.started += instance.OnShoot;
+            @Shoot.performed += instance.OnShoot;
+            @Shoot.canceled += instance.OnShoot;
+>>>>>>> Stashed changes
         }
 
         private void UnregisterCallbacks(IHeroActions instance)
@@ -286,6 +356,15 @@ public partial class @HeroControler: IInputActionCollection2, IDisposable
             @Acceleration.started -= instance.OnAcceleration;
             @Acceleration.performed -= instance.OnAcceleration;
             @Acceleration.canceled -= instance.OnAcceleration;
+<<<<<<< Updated upstream
+=======
+            @Aim.started -= instance.OnAim;
+            @Aim.performed -= instance.OnAim;
+            @Aim.canceled -= instance.OnAim;
+            @Shoot.started -= instance.OnShoot;
+            @Shoot.performed -= instance.OnShoot;
+            @Shoot.canceled -= instance.OnShoot;
+>>>>>>> Stashed changes
         }
 
         public void RemoveCallbacks(IHeroActions instance)
@@ -310,5 +389,10 @@ public partial class @HeroControler: IInputActionCollection2, IDisposable
         void OnHammer(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnAcceleration(InputAction.CallbackContext context);
+<<<<<<< Updated upstream
+=======
+        void OnAim(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
+>>>>>>> Stashed changes
     }
 }
