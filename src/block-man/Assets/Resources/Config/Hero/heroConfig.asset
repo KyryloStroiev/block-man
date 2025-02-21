@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 4
   JumpHeight: 3
-  MaxDistanceShoot: 9
+  MaxDistanceShoot: 20
   SmoothFactor: 3
   CircleTargetsRadius: 0.2
   CircleOffsetXTarget: 0.5

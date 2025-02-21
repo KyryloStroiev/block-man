@@ -1,6 +1,4 @@
-﻿using System;
-using Code.Gameplay.StaticData;
-using Code.Infrastructure.States.GameStates;
+﻿using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;
 using UnityEngine;
 using UnityEngine.UI;

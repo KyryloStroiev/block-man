@@ -48,6 +48,8 @@ namespace Code.Infrastructure.States.GameStates
             _windowFactory.CreatePointsCounter();
             _uiFactory.CreateFlagGameOver(_levelDataProvider.FlagPoint);
             _uiFactory.CreateGameTimer();
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Confined;
         }
     }
 }
