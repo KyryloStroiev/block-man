@@ -10,6 +10,10 @@ using Code.Gameplay.Input;
 using Code.Gameplay.Input.Service;
 using Code.Gameplay.Levels;
 using Code.Gameplay.StaticData;
+using Code.Gameplay.UI.Factory;
+using Code.Gameplay.Windows;
+using Code.Gameplay.Windows.Factory;
+using Code.Gameplay.Windows.Service;
 using Code.Infrastructure;
 using Code.Infrastructure.AssetManagement;
 using Code.Infrastructure.Identifiers;
@@ -30,6 +34,8 @@ public class BootstrapInstaller : MonoInstaller, IInitializable, ICoroutineRunne
         BindStaticDataService();
         BindInfrastructureServices();
         BindContext();
+        BindUIFactories();
+        BindUIServices();
         BindStateFactory();
         BindGameStateMachine();
         BindCameraProvider();
@@ -61,10 +67,21 @@ public class BootstrapInstaller : MonoInstaller, IInitializable, ICoroutineRunne
     private void BindGameState()
     {
         Container.BindInterfacesAndSelfTo<BootstrapState>().AsSingle();
+        Container.BindInterfacesAndSelfTo<LoadingHomeScreenState>().AsSingle();
+        Container.BindInterfacesAndSelfTo<HomeScreenState>().AsSingle();
         Container.BindInterfacesAndSelfTo<LoadingBattleState>().AsSingle();
         Container.BindInterfacesAndSelfTo<BattleEnterState>().AsSingle();
         Container.BindInterfacesAndSelfTo<BattleLoopState>().AsSingle();
     }
+
+    private void BindUIFactories()
+    {
+        Container.Bind<IWindowFactory>().To<WindowFactory>().AsSingle();
+        Container.Bind<IUIFactory>().To<UIFactory>().AsSingle();
+    }
+
+    private void BindUIServices() => 
+        Container.Bind<IWindowService>().To<WindowService>().AsSingle();
 
     private void BindGameFactory()
     {

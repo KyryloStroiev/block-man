@@ -12,8 +12,8 @@ namespace Code.Gameplay.Features.Movement
             Add(systems.Create<TurnAlongDirectionSystem>());
             Add(systems.Create<ScaleGravitySystem>());
             Add(systems.Create<ChangeWorldPositionSystem>());
-            Add(systems.Create<UpdateRigidbodyMovePositionSystem>());
             Add(systems.Create<UpdateTransformPositionSystem>());
+            Add(systems.Create<UpdateRigidbodyMovePositionSystem>());
             
         }
     }

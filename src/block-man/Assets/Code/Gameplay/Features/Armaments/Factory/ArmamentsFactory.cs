@@ -57,7 +57,6 @@ namespace Code.Gameplay.Features.Armaments.Factory
                 .AddWorldPosition(at)
                 .AddViewPrefab(_armamentsConfig.cubePrefab)
                 .AddRotationSpeed(_armamentsConfig.RotationSpeed)
-                .AddTargetLayerMask(CollisionLayer.Cube.AsMask())
                 .With(x=>x.isRotationCube = true)
                 .With(x=>x.isMoving = true);
            
@@ -73,7 +72,6 @@ namespace Code.Gameplay.Features.Armaments.Factory
                 .AddViewPrefab(_armamentsConfig.cubePrefab)
                 .AddHorizontalDirection(horizontalDirection)
                 .AddRotationSpeed(_armamentsConfig.RotationSpeed)
-                .AddTargetLayerMask(CollisionLayer.Cube.AsMask())
                 .AddSelfDestructTimer(TimeOfLife)
                 .With(x=>x.isBulletCube = true)
                 .With(x=>x.isMoving = true);

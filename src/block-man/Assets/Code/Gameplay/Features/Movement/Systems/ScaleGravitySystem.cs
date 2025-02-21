@@ -18,8 +18,7 @@ namespace Code.Gameplay.Features.Movement.Systems
          _physicsService = physicsService;
          _movers = game.GetGroup(GameMatcher
             .AllOf(GameMatcher.VerticalDirection,
-               GameMatcher.Gravity,
-               GameMatcher.Rigidbody));
+               GameMatcher.Gravity));
       }
 
       public void Execute()
@@ -32,7 +31,7 @@ namespace Code.Gameplay.Features.Movement.Systems
               
             }
 
-            if (IsTouchingCeiling(mover) && !mover.isGround )
+            if (IsTouchingCeiling(mover) && !mover.isGround)
             {
                mover.ReplaceVerticalDirection(-2);
             }

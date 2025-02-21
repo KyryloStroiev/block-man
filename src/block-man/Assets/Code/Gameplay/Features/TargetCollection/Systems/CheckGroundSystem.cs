@@ -32,7 +32,7 @@ namespace Code.Gameplay.Features.TargetCollection.Systems
 
         private int OverlapCircle(GameEntity entity)
         {
-            return _physicsService.CircleCastEntity(entity.Transform.position, entity.CircleOffsetY, entity.RadiusGroundCheck,
+            return _physicsService.CircleCast(entity.Transform.position, entity.CircleOffsetY, entity.RadiusGroundCheck,
                 entity.GroundLayerMask);
         }
     }

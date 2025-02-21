@@ -13,5 +13,8 @@ namespace Code.Gameplay.Features.TargetCollection
     [Game] public class CircleOffsetX: IComponent {public float Value; }
     [Game] public class GroundLayerMask: IComponent {public int Value; }
     [Game] public class TargetLayerMask: IComponent {public int Value; }
+    [Game] public class ObstacleLayerMask: IComponent {public int Value; }
+   
+    
 
 }

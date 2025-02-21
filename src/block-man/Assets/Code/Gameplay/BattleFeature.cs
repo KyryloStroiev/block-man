@@ -1,5 +1,6 @@
 using Code.Common.Destruct;
 using Code.Gameplay.Features.Armaments;
+using Code.Gameplay.Features.Crosshair;
 using Code.Gameplay.Features.Hero;
 using Code.Gameplay.Features.Movement;
 using Code.Gameplay.Features.TargetCollection;
@@ -17,11 +18,12 @@ namespace Code.Gameplay
         {
             Add(systems.Create<InputFeature>());
             Add(systems.Create<BindViewFeature>());
-            Add(systems.Create<MovementFeature>());
+            Add(systems.Create<CrosshairFeature>());
             Add(systems.Create<CollectTargetsFeature>());
             Add(systems.Create<HeroFeature>());
             Add(systems.Create<BlockFeature>());
             Add(systems.Create<ArmamentsFeature>());
+            Add(systems.Create<MovementFeature>());
             Add(systems.Create<UIFeature>());
             
             Add(systems.Create<ProcessDestructedFeature>());

@@ -65,8 +65,7 @@ namespace Code.Gameplay.Features.Block.Systems
 
         private int OverlapCircle(GameEntity entity, Transform childBlock)
         {
-            return _physicsService.CircleCastCube(childBlock.position, entity.CircleOffsetY, entity.RadiusGroundCheck,
-                entity.TargetLayerMask, entity.Transform.gameObject);
+            return _physicsService.BoxCastParents(childBlock, entity.TargetLayerMask);
         }
     }
     

@@ -1,11 +1,16 @@
 ﻿using Code.Gameplay.Cameras.Provider;
+using Code.Gameplay.Common.Time;
+using Code.Gameplay.Input.Service;
 using Entitas;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Code.Gameplay.Features.Crosshair.Systems
 {
     public class UpdateCrosshairPositionSystem : IExecuteSystem
     {
+     
+        private readonly IInputService _inputService;
         private readonly ICameraProvider _cameraProvider;
         private readonly IGroup<GameEntity> _crosshairs;
         private readonly IGroup<GameEntity> _heroes;
@@ -19,6 +24,7 @@ namespace Code.Gameplay.Features.Crosshair.Systems
             _heroes = game.GetGroup(GameMatcher
                 .AllOf(GameMatcher.Hero,
                     GameMatcher.WorldPosition));
+         
         }
 
         public void Execute()
@@ -26,42 +32,31 @@ namespace Code.Gameplay.Features.Crosshair.Systems
             foreach (GameEntity hero in _heroes)
             foreach (GameEntity crosshair in _crosshairs)
             {
-<<<<<<< Updated upstream
-                crosshair.ReplaceWorldPosition(PositionMouse(hero, crosshair.MaxDistanceShoot));
-            }
-        }
-
-        private Vector3 PositionMouse(GameEntity entity, float maxShootDistance)
-=======
-                //crosshair.ReplaceWorldPosition(PositionJoystick(crosshair, hero, input));
                 crosshair.ReplaceWorldPosition(PositionMouse(hero, crosshair));
             }
         }
 
-       
         
         private Vector3 PositionMouse(GameEntity hero, GameEntity crosshair)
->>>>>>> Stashed changes
         {
+            Vector2 mouseScreenPosition = Mouse.current.position.ReadValue();
             
-            Vector3 cameraPosition = _cameraProvider.MainCamera.ScreenToWorldPoint(UnityEngine.Input.mousePosition);
+            Vector3 cameraPosition =
+                _cameraProvider.MainCamera.ScreenToWorldPoint(new Vector3(mouseScreenPosition.x, mouseScreenPosition.y, 0));
             cameraPosition.z = 0;
             
-            float distance = Vector3.Distance(entity.WorldPosition, cameraPosition);
-            if (distance > maxShootDistance)
+            float distance = Vector3.Distance(hero.WorldPosition, cameraPosition);
+            if (distance > crosshair.MaxDistanceShoot)
             {
-                Vector3 direction = (cameraPosition - entity.WorldPosition).normalized;
-                return entity.WorldPosition + direction * maxShootDistance;
+                Vector3 direction = (cameraPosition - hero.WorldPosition).normalized;
+                return hero.WorldPosition + direction * crosshair.MaxDistanceShoot;
             }
             else
             {
                 return cameraPosition;
             }
         }
-<<<<<<< Updated upstream
-=======
         
         
->>>>>>> Stashed changes
     }
 }

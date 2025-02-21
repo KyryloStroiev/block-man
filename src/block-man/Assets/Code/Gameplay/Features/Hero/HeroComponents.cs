@@ -11,6 +11,9 @@ namespace Code.Gameplay.Features.Hero
         [Game] public class JumpHeight: IComponent {public float Value; }
         [Game] public class MaxHeightHero: IComponent {public float Value; }
         [Game] public class DestructCubes: IComponent {public int Value; }
+        [Game] public class CameraOffsetY: IComponent {public float Value; }
+        
+        
 
 
     }

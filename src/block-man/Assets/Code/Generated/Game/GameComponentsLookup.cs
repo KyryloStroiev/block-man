@@ -36,42 +36,57 @@ public static class GameComponentsLookup {
     public const int SpawnReady = 25;
     public const int SpawnTimer = 26;
     public const int SpawnTimerInterval = 27;
-    public const int Crosshair = 28;
-    public const int MaxDistanceShoot = 29;
-    public const int Shoot = 30;
-    public const int DestructCubes = 31;
-    public const int Hero = 32;
-    public const int HeroAnimator = 33;
-    public const int Jump = 34;
-    public const int JumpHeight = 35;
-    public const int MaxHeightHero = 36;
-    public const int Gravity = 37;
-    public const int HorizontalDirection = 38;
-    public const int Moving = 39;
-    public const int Rigidbody = 40;
-    public const int RotationSpeed = 41;
-    public const int Speed = 42;
-    public const int TurnedAlongDirection = 43;
-    public const int VerticalDirection = 44;
-    public const int CircleOffsetX = 45;
-    public const int CircleOffsetY = 46;
-    public const int Ground = 47;
-    public const int GroundLayerMask = 48;
-    public const int RadiusCastTargets = 49;
-    public const int RadiusGroundCheck = 50;
-    public const int ReadyToCollectTargets = 51;
-    public const int TargetLayerMask = 52;
-    public const int Targets = 53;
-    public const int TargetsBuffer = 54;
-    public const int AccelerationInput = 55;
-    public const int AxisInput = 56;
-    public const int HammerAttackInput = 57;
-    public const int Input = 58;
-    public const int JumpInput = 59;
-    public const int ShootInput = 60;
-    public const int PointsCounter = 61;
+    public const int ClampedPosition = 28;
+    public const int Crosshair = 29;
+    public const int CrosshairAngle = 30;
+    public const int CrosshairTarget = 31;
+    public const int MaxDistanceShoot = 32;
+    public const int Shoot = 33;
+    public const int SmoothFactor = 34;
+    public const int CameraOffsetY = 35;
+    public const int DestructCubes = 36;
+    public const int Hero = 37;
+    public const int HeroAnimator = 38;
+    public const int Jump = 39;
+    public const int JumpHeight = 40;
+    public const int MaxHeightHero = 41;
+    public const int Gravity = 42;
+    public const int HorizontalDirection = 43;
+    public const int LastDirection = 44;
+    public const int Moving = 45;
+    public const int Rigidbody = 46;
+    public const int RotationSpeed = 47;
+    public const int Speed = 48;
+    public const int TurnedAlongDirection = 49;
+    public const int VerticalDirection = 50;
+    public const int CircleOffsetX = 51;
+    public const int CircleOffsetY = 52;
+    public const int Ground = 53;
+    public const int GroundLayerMask = 54;
+    public const int ObstacleLayerMask = 55;
+    public const int RadiusCastTargets = 56;
+    public const int RadiusGroundCheck = 57;
+    public const int ReadyToCollectTargets = 58;
+    public const int TargetLayerMask = 59;
+    public const int Targets = 60;
+    public const int TargetsBuffer = 61;
+    public const int AccelerationInput = 62;
+    public const int AimPosition = 63;
+    public const int AxisInput = 64;
+    public const int HammerAttackInput = 65;
+    public const int Input = 66;
+    public const int JumpInput = 67;
+    public const int ShootInput = 68;
+    public const int Final = 69;
+    public const int FlagGameOver = 70;
+    public const int GameOver = 71;
+    public const int GameTimer = 72;
+    public const int PointsCounter = 73;
+    public const int PointsGameOver = 74;
+    public const int RectTransform = 75;
+    public const int TimePassed = 76;
 
-    public const int TotalComponents = 62;
+    public const int TotalComponents = 77;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -102,9 +117,14 @@ public static class GameComponentsLookup {
         "SpawnReady",
         "SpawnTimer",
         "SpawnTimerInterval",
+        "ClampedPosition",
         "Crosshair",
+        "CrosshairAngle",
+        "CrosshairTarget",
         "MaxDistanceShoot",
         "Shoot",
+        "SmoothFactor",
+        "CameraOffsetY",
         "DestructCubes",
         "Hero",
         "HeroAnimator",
@@ -113,6 +133,7 @@ public static class GameComponentsLookup {
         "MaxHeightHero",
         "Gravity",
         "HorizontalDirection",
+        "LastDirection",
         "Moving",
         "Rigidbody",
         "RotationSpeed",
@@ -123,6 +144,7 @@ public static class GameComponentsLookup {
         "CircleOffsetY",
         "Ground",
         "GroundLayerMask",
+        "ObstacleLayerMask",
         "RadiusCastTargets",
         "RadiusGroundCheck",
         "ReadyToCollectTargets",
@@ -130,12 +152,20 @@ public static class GameComponentsLookup {
         "Targets",
         "TargetsBuffer",
         "AccelerationInput",
+        "AimPosition",
         "AxisInput",
         "HammerAttackInput",
         "Input",
         "JumpInput",
         "ShootInput",
-        "PointsCounter"
+        "Final",
+        "FlagGameOver",
+        "GameOver",
+        "GameTimer",
+        "PointsCounter",
+        "PointsGameOver",
+        "RectTransform",
+        "TimePassed"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -167,9 +197,14 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Block.SpawnReady),
         typeof(Code.Gameplay.Features.Block.SpawnTimer),
         typeof(Code.Gameplay.Features.Block.SpawnTimerInterval),
+        typeof(Code.Gameplay.Features.Crosshair.ClampedPosition),
         typeof(Code.Gameplay.Features.Crosshair.Crosshair),
+        typeof(Code.Gameplay.Features.Crosshair.CrosshairAngle),
+        typeof(Code.Gameplay.Features.Crosshair.CrosshairTarget),
         typeof(Code.Gameplay.Features.Crosshair.MaxDistanceShoot),
         typeof(Code.Gameplay.Features.Crosshair.Shoot),
+        typeof(Code.Gameplay.Features.Crosshair.SmoothFactor),
+        typeof(Code.Gameplay.Features.Hero.HeroComponents.CameraOffsetY),
         typeof(Code.Gameplay.Features.Hero.HeroComponents.DestructCubes),
         typeof(Code.Gameplay.Features.Hero.HeroComponents.Hero),
         typeof(Code.Gameplay.Features.Hero.HeroComponents.HeroAnimatorComponent),
@@ -178,6 +213,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Hero.HeroComponents.MaxHeightHero),
         typeof(Code.Gameplay.Features.Movement.MovementComponents.Gravity),
         typeof(Code.Gameplay.Features.Movement.MovementComponents.HorizontalDirection),
+        typeof(Code.Gameplay.Features.Movement.MovementComponents.LastDirection),
         typeof(Code.Gameplay.Features.Movement.MovementComponents.Moving),
         typeof(Code.Gameplay.Features.Movement.MovementComponents.RigidbodyComponent),
         typeof(Code.Gameplay.Features.Movement.MovementComponents.RotationSpeed),
@@ -188,6 +224,7 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.TargetCollection.CircleOffsetY),
         typeof(Code.Gameplay.Features.TargetCollection.Ground),
         typeof(Code.Gameplay.Features.TargetCollection.GroundLayerMask),
+        typeof(Code.Gameplay.Features.TargetCollection.ObstacleLayerMask),
         typeof(Code.Gameplay.Features.TargetCollection.RadiusCastTargets),
         typeof(Code.Gameplay.Features.TargetCollection.RadiusGroundCheck),
         typeof(Code.Gameplay.Features.TargetCollection.ReadyToCollectTargets),
@@ -195,11 +232,19 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.TargetCollection.Targets),
         typeof(Code.Gameplay.Features.TargetCollection.TargetsBuffer),
         typeof(Code.Gameplay.Input.AccelerationInput),
+        typeof(Code.Gameplay.Input.AimPosition),
         typeof(Code.Gameplay.Input.AxisInput),
         typeof(Code.Gameplay.Input.HammerAttackInput),
         typeof(Code.Gameplay.Input.Input),
         typeof(Code.Gameplay.Input.JumpInput),
         typeof(Code.Gameplay.Input.ShootInput),
-        typeof(Code.Gameplay.UI.PointsCounterComponent)
+        typeof(Code.Gameplay.UI.Final),
+        typeof(Code.Gameplay.UI.FlagGameOver),
+        typeof(Code.Gameplay.UI.GameOver),
+        typeof(Code.Gameplay.UI.GameTimer),
+        typeof(Code.Gameplay.UI.PointsCounterComponent),
+        typeof(Code.Gameplay.UI.PointsGameOverComponent),
+        typeof(Code.Gameplay.UI.RectTransformComponent),
+        typeof(Code.Gameplay.UI.TimePassed)
     };
 }

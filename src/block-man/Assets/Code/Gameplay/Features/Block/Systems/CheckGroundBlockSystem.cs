@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Code.Gameplay.Common.PhysicsService;
 using Entitas;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace Code.Gameplay.Features.Block.Systems
@@ -31,7 +30,7 @@ namespace Code.Gameplay.Features.Block.Systems
 
                 for (int i = 0; i < cubes.Count; i++)
                 {
-                    if (OverlapCircle(entity, cubes[i].transform) > 0)
+                    if (OverlapBox(entity, cubes[i].transform) > 0)
                     {
                             entity.isGround = true;
                             break;
@@ -40,10 +39,9 @@ namespace Code.Gameplay.Features.Block.Systems
             }
         } 
 
-        private int OverlapCircle(GameEntity entity, Transform childBlock)
+        private int OverlapBox(GameEntity entity, Transform childBlock)
         {
-            return _physicsService.CircleCastEntity(childBlock.position, entity.CircleOffsetY, entity.RadiusGroundCheck,
-                entity.GroundLayerMask);
+            return _physicsService.BoxCast(childBlock, entity.GroundLayerMask);
         }
     }
 }

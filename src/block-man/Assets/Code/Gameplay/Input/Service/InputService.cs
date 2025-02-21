@@ -1,15 +1,21 @@
-﻿using Unity.VisualScripting;
+﻿using Code.Gameplay.Windows;
+using Code.Gameplay.Windows.Service;
+using Unity.VisualScripting;
+using UnityEngine;
 
 namespace Code.Gameplay.Input.Service
 {
     public class InputService : IInputService
     {
+        private readonly IWindowService _windowService;
         private HeroControler _input;
 
         private bool _isJumpPressed;
         private bool _isHammerPressed;
         private bool _isShootPressed;
         private bool _isAccelerationPressed;
+        
+        private Vector2 _joystickAxis;
 
         public InputService()
         {
@@ -22,24 +28,23 @@ namespace Code.Gameplay.Input.Service
             _input.Hero.Hammer.performed +=_=> _isHammerPressed = true;
             _input.Hero.Hammer.canceled +=_=> _isHammerPressed = false;
             
-            _input.Hero.Shoot.performed +=_=> _isShootPressed = true;
-            _input.Hero.Shoot.canceled +=_=> _isShootPressed = false;
-            
             _input.Hero.Acceleration.performed +=_=> _isAccelerationPressed = true;
             _input.Hero.Acceleration.canceled +=_=> _isAccelerationPressed = false;
-<<<<<<< Updated upstream
-=======
             
             
             
             _input.Hero.Shoot.performed +=_=> _isShootPressed = true;
             _input.Hero.Shoot.canceled +=_=> _isShootPressed = false;
->>>>>>> Stashed changes
         }
         
 
         public bool HasAxisInput() => GetHorizontalAxis() != 0;
 
+        
+        public void Test()
+        {
+        
+        }
         public float GetHorizontalAxis() => 
             _input.Hero.HorizontalMove.ReadValue<float>();
 
@@ -52,6 +57,7 @@ namespace Code.Gameplay.Input.Service
 
         private bool PressOnceButton()
         {
+           
             if (_isHammerPressed)
             {
                 _isHammerPressed = false;

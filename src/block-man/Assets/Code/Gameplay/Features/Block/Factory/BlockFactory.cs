@@ -31,9 +31,8 @@ namespace Code.Gameplay.Features.Block.Factory
                 .AddWorldPosition(at)
                 .AddSpeed(_blockConfig.Speed)
                 .AddViewPrefab(PrefabBlockId(typeId))
-                .AddVerticalDirection(-1)
+                .AddVerticalDirection(-1f)
                 .AddCircleOffsetY(0)
-                .AddTargetLayerMask(CollisionLayer.Cube.AsMask()) 
                 .AddRadiusGroundCheck(_blockConfig.CircleGroundRadius)
                 .With(x=>x.isBlock = true)
                 .With(x=>x.isMoving = true);

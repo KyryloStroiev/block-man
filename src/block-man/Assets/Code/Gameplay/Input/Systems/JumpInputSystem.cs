@@ -1,6 +1,5 @@
 ﻿using Code.Gameplay.Input.Service;
 using Entitas;
-using UnityEngine;
 
 namespace Code.Gameplay.Input.Systems
 {
@@ -22,6 +21,8 @@ namespace Code.Gameplay.Input.Systems
             foreach (GameEntity input in _inputs)
             {
                 input.isJumpInput = _inputService.GetButtonJump();
+                
+                //Debug.Log(_inputService.JoystickAxis());
             }
         }
     }

@@ -9,6 +9,7 @@ namespace Code.Infrastructure.States.GameStates
     public class BootstrapState: IState
     {
         private const string BattleScene = "Main";
+       
         private readonly IGameStateMachine _stateMachine;
         private readonly IStaticDataService _staticDataService;
         private readonly ILevelDataProvider _levelDataProvider;
@@ -22,7 +23,7 @@ namespace Code.Infrastructure.States.GameStates
         public void Enter()
         {
             _staticDataService.LoadAll();
-            _stateMachine.Enter<LoadingBattleState, string>(BattleScene);
+            _stateMachine.Enter<LoadingHomeScreenState>();
         }
 
         public void Exit()

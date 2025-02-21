@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4870171420779964619}
   - component: {fileID: 4911700603553773548}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: contactCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 0.9}
+  m_Size: {x: 0.6, y: 1.04}
   m_Direction: 0
 --- !u!1 &1013027438554247417
 GameObject:
@@ -80,14 +80,12 @@ GameObject:
   - component: {fileID: 1220625873316567980}
   - component: {fileID: 2507341277070983253}
   - component: {fileID: 3058297003584481526}
-  - component: {fileID: 1483416372250454244}
   - component: {fileID: 7001652838084970019}
   - component: {fileID: 6400532531324505931}
-  - component: {fileID: 3784969458095715300}
   - component: {fileID: 7024935669012793654}
   - component: {fileID: 3212536163867511810}
   - component: {fileID: 8753054418256173699}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Hero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,20 +137,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EntityView: {fileID: 7001652838084970019}
   HeroAnimator: {fileID: 2507341277070983253}
---- !u!114 &1483416372250454244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013027438554247417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b85f56c2044251a5a144098189c340, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EntityView: {fileID: 7001652838084970019}
-  Rigidbody: {fileID: 3784969458095715300}
 --- !u!114 &7001652838084970019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,34 +164,13 @@ MonoBehaviour:
   EntityView: {fileID: 7001652838084970019}
   GroundLayerMask:
     serializedVersion: 2
-    m_Bits: 1472
---- !u!50 &3784969458095715300
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1013027438554247417}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
+    m_Bits: 448
+  TargetLayerMask:
     serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
+    m_Bits: 128
+  ObstacleLayerMask:
     serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+    m_Bits: 1984
 --- !u!114 &7024935669012793654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,10 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CircleGroundRadius: 0.2
-  CircleTargetsRadius: 0.2
-  CircleOffsetYGround: -0.29
-  Speed: 4
-  JumpHeight: 4
+  CircleOffsetYGround: -0.31
 --- !u!1 &2753089495930511433
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,7 +221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2528499809667664433}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +255,7 @@ GameObject:
   - component: {fileID: 1000071118467925805}
   - component: {fileID: 3832698572436571542}
   - component: {fileID: 4102504553374062130}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BaseSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,12 +321,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2055070721, guid: cfa51002d51836a45bca812703c7822e, type: 3}
+  m_Sprite: {fileID: -2055070721, guid: 4a0dd963be3013845bd1261b633f6ac2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.65625, y: 0.90625}
+  m_Size: {x: 0.75, y: 1.0357143}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
