@@ -34,7 +34,7 @@ public sealed partial class GameEntity : INamedEntity
             {
                 switch (component.GetType().Name)
                 {
-                    case nameof(HeroComponents.Hero):
+                    case nameof(Hero):
                         return PrintHero();
 
                     case nameof(Block):

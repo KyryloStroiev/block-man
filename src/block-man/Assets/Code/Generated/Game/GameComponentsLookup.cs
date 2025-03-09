@@ -77,16 +77,20 @@ public static class GameComponentsLookup {
     public const int Input = 66;
     public const int JumpInput = 67;
     public const int ShootInput = 68;
-    public const int Final = 69;
-    public const int FlagGameOver = 70;
-    public const int GameOver = 71;
-    public const int GameTimer = 72;
-    public const int PointsCounter = 73;
-    public const int PointsGameOver = 74;
-    public const int RectTransform = 75;
-    public const int TimePassed = 76;
+    public const int AudioSource = 69;
+    public const int SoundPlayer = 70;
+    public const int DeathCollider = 71;
+    public const int Final = 72;
+    public const int FlagAnimator = 73;
+    public const int FlagGameOver = 74;
+    public const int GameOver = 75;
+    public const int GameTimer = 76;
+    public const int PointsCounter = 77;
+    public const int PointsGameOver = 78;
+    public const int RectTransform = 79;
+    public const int TimePassed = 80;
 
-    public const int TotalComponents = 77;
+    public const int TotalComponents = 81;
 
     public static readonly string[] componentNames = {
         "Destructed",
@@ -158,7 +162,11 @@ public static class GameComponentsLookup {
         "Input",
         "JumpInput",
         "ShootInput",
+        "AudioSource",
+        "SoundPlayer",
+        "DeathCollider",
         "Final",
+        "FlagAnimator",
         "FlagGameOver",
         "GameOver",
         "GameTimer",
@@ -204,13 +212,13 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Features.Crosshair.MaxDistanceShoot),
         typeof(Code.Gameplay.Features.Crosshair.Shoot),
         typeof(Code.Gameplay.Features.Crosshair.SmoothFactor),
-        typeof(Code.Gameplay.Features.Hero.HeroComponents.CameraOffsetY),
-        typeof(Code.Gameplay.Features.Hero.HeroComponents.DestructCubes),
-        typeof(Code.Gameplay.Features.Hero.HeroComponents.Hero),
-        typeof(Code.Gameplay.Features.Hero.HeroComponents.HeroAnimatorComponent),
-        typeof(Code.Gameplay.Features.Hero.HeroComponents.Jump),
-        typeof(Code.Gameplay.Features.Hero.HeroComponents.JumpHeight),
-        typeof(Code.Gameplay.Features.Hero.HeroComponents.MaxHeightHero),
+        typeof(Code.Gameplay.Features.Hero.CameraOffsetY),
+        typeof(Code.Gameplay.Features.Hero.DestructCubes),
+        typeof(Code.Gameplay.Features.Hero.Hero),
+        typeof(Code.Gameplay.Features.Hero.HeroAnimatorComponent),
+        typeof(Code.Gameplay.Features.Hero.Jump),
+        typeof(Code.Gameplay.Features.Hero.JumpHeight),
+        typeof(Code.Gameplay.Features.Hero.MaxHeightHero),
         typeof(Code.Gameplay.Features.Movement.MovementComponents.Gravity),
         typeof(Code.Gameplay.Features.Movement.MovementComponents.HorizontalDirection),
         typeof(Code.Gameplay.Features.Movement.MovementComponents.LastDirection),
@@ -238,7 +246,11 @@ public static class GameComponentsLookup {
         typeof(Code.Gameplay.Input.Input),
         typeof(Code.Gameplay.Input.JumpInput),
         typeof(Code.Gameplay.Input.ShootInput),
+        typeof(Code.Gameplay.Sound.AudioSourceComponent),
+        typeof(Code.Gameplay.Sound.SoundPlayer),
+        typeof(Code.Gameplay.UI.DeathCollider),
         typeof(Code.Gameplay.UI.Final),
+        typeof(Code.Gameplay.UI.FlagAnimatorComponent),
         typeof(Code.Gameplay.UI.FlagGameOver),
         typeof(Code.Gameplay.UI.GameOver),
         typeof(Code.Gameplay.UI.GameTimer),

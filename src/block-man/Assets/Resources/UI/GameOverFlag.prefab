@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8516084926621526440}
   - component: {fileID: 2592232037932970367}
   - component: {fileID: 7778266499762100244}
+  - component: {fileID: 6553804670837171115}
   m_Layer: 0
   m_Name: sprite
   m_TagString: Untagged
@@ -134,6 +135,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.375, y: 3.9375}
   m_EdgeRadius: 0
+--- !u!95 &6553804670837171115
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5373128333974642498}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ac184507f7e0ba647832509ff7c0b1ee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7368809569756543208
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +169,8 @@ GameObject:
   - component: {fileID: 4029682653931380867}
   - component: {fileID: 403363145339882265}
   - component: {fileID: -6870181690328289887}
+  - component: {fileID: 455441077259577532}
+  - component: {fileID: 7434884441767661962}
   m_Layer: 0
   m_Name: GameOverFlag
   m_TagString: Untagged
@@ -216,3 +241,30 @@ MonoBehaviour:
   ObstacleLayerMask:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &455441077259577532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7368809569756543208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5471792e6844e8f8df9bec4df838aac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator: {fileID: 6553804670837171115}
+--- !u!114 &7434884441767661962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7368809569756543208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 607a98b1cb6045f093ef5610c1d928bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EntityView: {fileID: 4029682653931380867}
+  FlagAnimator: {fileID: 455441077259577532}

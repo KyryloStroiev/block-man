@@ -10,8 +10,7 @@ namespace Code.Gameplay.Features.Hero
         public float JumpHeight = 3;
         
         public float MaxDistanceShoot = 10;
-        public int SmoothFactor;
-
+        
         public float CircleTargetsRadius = 0.2f;
         public float CircleOffsetXTarget= 0.6f;
 

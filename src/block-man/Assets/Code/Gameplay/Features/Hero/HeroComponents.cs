@@ -3,8 +3,7 @@ using Entitas;
 
 namespace Code.Gameplay.Features.Hero
 {
-    public class HeroComponents
-    {
+  
         [Game] public class Hero: IComponent { }
         [Game] public class Jump: IComponent { }
         [Game] public class HeroAnimatorComponent: IComponent {public HeroAnimator Value; }
@@ -14,7 +13,4 @@ namespace Code.Gameplay.Features.Hero
         [Game] public class CameraOffsetY: IComponent {public float Value; }
         
         
-
-
-    }
 }

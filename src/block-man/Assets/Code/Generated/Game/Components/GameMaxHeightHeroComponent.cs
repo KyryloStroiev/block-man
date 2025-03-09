@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Code.Gameplay.Features.Hero.HeroComponents.MaxHeightHero maxHeightHero { get { return (Code.Gameplay.Features.Hero.HeroComponents.MaxHeightHero)GetComponent(GameComponentsLookup.MaxHeightHero); } }
+    public Code.Gameplay.Features.Hero.MaxHeightHero maxHeightHero { get { return (Code.Gameplay.Features.Hero.MaxHeightHero)GetComponent(GameComponentsLookup.MaxHeightHero); } }
     public float MaxHeightHero { get { return maxHeightHero.Value; } }
     public bool hasMaxHeightHero { get { return HasComponent(GameComponentsLookup.MaxHeightHero); } }
 
     public GameEntity AddMaxHeightHero(float newValue) {
         var index = GameComponentsLookup.MaxHeightHero;
-        var component = (Code.Gameplay.Features.Hero.HeroComponents.MaxHeightHero)CreateComponent(index, typeof(Code.Gameplay.Features.Hero.HeroComponents.MaxHeightHero));
+        var component = (Code.Gameplay.Features.Hero.MaxHeightHero)CreateComponent(index, typeof(Code.Gameplay.Features.Hero.MaxHeightHero));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceMaxHeightHero(float newValue) {
         var index = GameComponentsLookup.MaxHeightHero;
-        var component = (Code.Gameplay.Features.Hero.HeroComponents.MaxHeightHero)CreateComponent(index, typeof(Code.Gameplay.Features.Hero.HeroComponents.MaxHeightHero));
+        var component = (Code.Gameplay.Features.Hero.MaxHeightHero)CreateComponent(index, typeof(Code.Gameplay.Features.Hero.MaxHeightHero));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

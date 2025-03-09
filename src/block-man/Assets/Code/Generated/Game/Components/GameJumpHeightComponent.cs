@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Code.Gameplay.Features.Hero.HeroComponents.JumpHeight jumpHeight { get { return (Code.Gameplay.Features.Hero.HeroComponents.JumpHeight)GetComponent(GameComponentsLookup.JumpHeight); } }
+    public Code.Gameplay.Features.Hero.JumpHeight jumpHeight { get { return (Code.Gameplay.Features.Hero.JumpHeight)GetComponent(GameComponentsLookup.JumpHeight); } }
     public float JumpHeight { get { return jumpHeight.Value; } }
     public bool hasJumpHeight { get { return HasComponent(GameComponentsLookup.JumpHeight); } }
 
     public GameEntity AddJumpHeight(float newValue) {
         var index = GameComponentsLookup.JumpHeight;
-        var component = (Code.Gameplay.Features.Hero.HeroComponents.JumpHeight)CreateComponent(index, typeof(Code.Gameplay.Features.Hero.HeroComponents.JumpHeight));
+        var component = (Code.Gameplay.Features.Hero.JumpHeight)CreateComponent(index, typeof(Code.Gameplay.Features.Hero.JumpHeight));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceJumpHeight(float newValue) {
         var index = GameComponentsLookup.JumpHeight;
-        var component = (Code.Gameplay.Features.Hero.HeroComponents.JumpHeight)CreateComponent(index, typeof(Code.Gameplay.Features.Hero.HeroComponents.JumpHeight));
+        var component = (Code.Gameplay.Features.Hero.JumpHeight)CreateComponent(index, typeof(Code.Gameplay.Features.Hero.JumpHeight));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

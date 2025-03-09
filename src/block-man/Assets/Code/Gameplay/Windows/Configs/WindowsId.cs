@@ -3,6 +3,8 @@
     public enum WindowsId
     {
         PauseWindow = 0,
-        GameOverWindow = 1, 
+        FinalGameOverWindow = 1, 
+        LevelsWindows = 2, 
+        GameOverWindow = 3,
     }
 }

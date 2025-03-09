@@ -1,4 +1,5 @@
-﻿using Code.Infrastructure.States.GameStates;
+﻿using Code.Gameplay.Levels;
+using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +10,7 @@ namespace Code.Meta.UI.Hud
     public class HomeHUD : MonoBehaviour
     {
         public Button NewGameButton;
-        private const string BattleScene = "Main";
+        public Button LevelsButton;
         private IGameStateMachine _gameStateMachine;
 
         [Inject]
@@ -25,7 +26,7 @@ namespace Code.Meta.UI.Hud
 
         private void StartNewGame()
         {
-            _gameStateMachine.Enter<LoadingBattleState, string>(BattleScene);
+            _gameStateMachine.Enter<LoadingBattleState, string>(LevelId.Level_1.ToString());
         }
     }
 }

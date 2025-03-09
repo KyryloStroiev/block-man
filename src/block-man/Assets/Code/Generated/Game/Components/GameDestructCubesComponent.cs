@@ -33,13 +33,13 @@ public sealed partial class GameMatcher {
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    public Code.Gameplay.Features.Hero.HeroComponents.DestructCubes destructCubes { get { return (Code.Gameplay.Features.Hero.HeroComponents.DestructCubes)GetComponent(GameComponentsLookup.DestructCubes); } }
+    public Code.Gameplay.Features.Hero.DestructCubes destructCubes { get { return (Code.Gameplay.Features.Hero.DestructCubes)GetComponent(GameComponentsLookup.DestructCubes); } }
     public int DestructCubes { get { return destructCubes.Value; } }
     public bool hasDestructCubes { get { return HasComponent(GameComponentsLookup.DestructCubes); } }
 
     public GameEntity AddDestructCubes(int newValue) {
         var index = GameComponentsLookup.DestructCubes;
-        var component = (Code.Gameplay.Features.Hero.HeroComponents.DestructCubes)CreateComponent(index, typeof(Code.Gameplay.Features.Hero.HeroComponents.DestructCubes));
+        var component = (Code.Gameplay.Features.Hero.DestructCubes)CreateComponent(index, typeof(Code.Gameplay.Features.Hero.DestructCubes));
         component.Value = newValue;
         AddComponent(index, component);
         return this;
@@ -47,7 +47,7 @@ public partial class GameEntity {
 
     public GameEntity ReplaceDestructCubes(int newValue) {
         var index = GameComponentsLookup.DestructCubes;
-        var component = (Code.Gameplay.Features.Hero.HeroComponents.DestructCubes)CreateComponent(index, typeof(Code.Gameplay.Features.Hero.HeroComponents.DestructCubes));
+        var component = (Code.Gameplay.Features.Hero.DestructCubes)CreateComponent(index, typeof(Code.Gameplay.Features.Hero.DestructCubes));
         component.Value = newValue;
         ReplaceComponent(index, component);
         return this;

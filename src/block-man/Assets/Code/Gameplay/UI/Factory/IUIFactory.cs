@@ -6,5 +6,6 @@ namespace Code.Gameplay.UI.Factory
     {
         GameEntity CreateFlagGameOver(Vector3 at);
         GameEntity CreateGameTimer();
+        GameEntity CreateDeathCollider(Vector3 at);
     }
 }

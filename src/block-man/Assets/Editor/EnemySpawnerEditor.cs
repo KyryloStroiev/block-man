@@ -17,7 +17,7 @@ namespace Editor
 
             if (GUILayout.Button("Collect"))
             {
-                levelData.GunSpawners = FindObjectsOfType<SpawnMarket>()
+                levelData.GunSpawners = FindObjectsOfType<SpawnArmamentMarket>()
                     .Select(x =>
                         new ArmamentsSpawnerData(
                             x.TypeId,

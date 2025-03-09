@@ -52,7 +52,6 @@ namespace Code.Gameplay.Features.Hero.Factory
                 .AddId(_identifier.NextId())
                 .AddViewPrefab(_staticDataService.GetHeroConfig().CrosshairPrefab)
                 .AddWorldPosition(at)
-                .AddSmoothFactor(_staticDataService.GetHeroConfig().SmoothFactor)
                 .AddTargetsBuffer( new List<int>(1))
                 .AddMaxDistanceShoot(_staticDataService.GetHeroConfig().MaxDistanceShoot)
                 .With(x=>x.isCrosshair = true)

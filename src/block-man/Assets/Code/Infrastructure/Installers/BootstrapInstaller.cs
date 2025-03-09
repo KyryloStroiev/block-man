@@ -10,6 +10,7 @@ using Code.Gameplay.Features.Hero.Factory;
 using Code.Gameplay.Input;
 using Code.Gameplay.Input.Service;
 using Code.Gameplay.Levels;
+using Code.Gameplay.Sound.Service;
 using Code.Gameplay.StaticData;
 using Code.Gameplay.UI.Factory;
 using Code.Gameplay.Windows;
@@ -24,6 +25,8 @@ using Code.Infrastructure.States.GameStates;
 using Code.Infrastructure.States.StateMachine;
 using Code.Infrastructure.Systems;
 using Code.Infrastructure.View.Factory;
+using Code.Progress.Provider;
+using Code.Progress.SaveLoad;
 using UnityEngine;
 using Zenject;
 
@@ -34,6 +37,7 @@ public class BootstrapInstaller : MonoInstaller, IInitializable, ICoroutineRunne
         BindInputService();
         BindStaticDataService();
         BindInfrastructureServices();
+        BindProgressService();
         BindContext();
         BindUIFactories();
         BindUIServices();
@@ -68,6 +72,7 @@ public class BootstrapInstaller : MonoInstaller, IInitializable, ICoroutineRunne
     private void BindGameState()
     {
         Container.BindInterfacesAndSelfTo<BootstrapState>().AsSingle();
+        Container.BindInterfacesAndSelfTo<LoadProgressState>().AsSingle();
         Container.BindInterfacesAndSelfTo<LoadingHomeScreenState>().AsSingle();
         Container.BindInterfacesAndSelfTo<HomeScreenState>().AsSingle();
         Container.BindInterfacesAndSelfTo<LoadingBattleState>().AsSingle();
@@ -99,6 +104,11 @@ public class BootstrapInstaller : MonoInstaller, IInitializable, ICoroutineRunne
         Container.Bind<GameContext>().FromInstance(Contexts.sharedInstance.game).AsSingle();
     }
 
+    private void BindProgressService()
+    {
+        Container.Bind<IProgressProvider>().To<ProgressProvider>().AsSingle();
+        Container.Bind<ISaveLoadService>().To<SaveLoadService>().AsSingle();
+    }
     private void BindAssetManagementServices() => 
         Container.Bind<IAssetProvider>().To<AssetProvider>().AsSingle();
 
@@ -111,6 +121,7 @@ public class BootstrapInstaller : MonoInstaller, IInitializable, ICoroutineRunne
         Container.Bind<IPhysicsService>().To<PhysicsService>().AsSingle();
         Container.Bind<IRandomService>().To<UnityRandomService>().AsSingle();
         Container.Bind<ICursorService>().To<CursorService>().AsSingle();
+        Container.Bind<IPlaySoundsService>().To<PlaySoundsService>().AsSingle();
     }
     
     

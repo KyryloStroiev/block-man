@@ -23,7 +23,7 @@ namespace Code.Infrastructure.States.GameStates
         public void Enter()
         {
             _staticDataService.LoadAll();
-            _stateMachine.Enter<LoadingHomeScreenState>();
+            _stateMachine.Enter<LoadProgressState>();
         }
 
         public void Exit()

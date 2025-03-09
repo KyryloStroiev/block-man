@@ -6,9 +6,9 @@ public sealed class BlockFeature : Feature
     public BlockFeature(ISystemFactory systems)
     {
         Add(systems.Create<InitializeSpawnTimer>());
+        Add(systems.Create<InitializeSpawnBlockComponentSystem>());
 
         Add(systems.Create<CheckCubeList>());
-        Add(systems.Create<CheckAllCubeSystem>());
         Add(systems.Create<UpdateSpawnPointPositionSystem>());
         Add(systems.Create<UpdateSpawnTimerSystem>());
         Add(systems.Create<AccelerationSpeedBlockSystem>());

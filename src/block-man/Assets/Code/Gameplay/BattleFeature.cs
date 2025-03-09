@@ -4,7 +4,9 @@ using Code.Gameplay.Features.Crosshair;
 using Code.Gameplay.Features.Hero;
 using Code.Gameplay.Features.Movement;
 using Code.Gameplay.Features.TargetCollection;
+using Code.Gameplay.GameOvers;
 using Code.Gameplay.Input;
+using Code.Gameplay.Sound;
 using Code.Gameplay.UI;
 using Code.Infrastructure.Systems;
 using Code.Infrastructure.View;
@@ -26,6 +28,7 @@ namespace Code.Gameplay
             Add(systems.Create<MovementFeature>());
             Add(systems.Create<UIFeature>());
             
+            Add(systems.Create<GameOverFeature>());
             Add(systems.Create<ProcessDestructedFeature>());
         }
     }

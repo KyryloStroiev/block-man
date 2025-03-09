@@ -1,26 +1,24 @@
-using Code.Gameplay.Features.Block.Factory;
 using Code.Gameplay.Features.Hero.Factory;
 using Code.Gameplay.Levels;
 using Entitas;
-using UnityEngine;
 
 namespace Code.Gameplay.Features.Hero
 {
     public class InitializeHeroSystem: IInitializeSystem
     {
-        private readonly IBlockFactory _blockFactory;
+        private readonly ILevelDataProvider _levelDataProvider;
         private readonly IHeroFactory _heroFactory;
 
-        public InitializeHeroSystem(GameContext game, IBlockFactory blockFactory, IHeroFactory heroFactory)
+        public InitializeHeroSystem(GameContext game, ILevelDataProvider levelDataProvider, IHeroFactory heroFactory)
         {
-            _blockFactory = blockFactory;
+            _levelDataProvider = levelDataProvider;
             _heroFactory = heroFactory;
         }
         
         public void Initialize()
         {
-            _blockFactory.CreateSpawnPoint(new Vector3(0,10,0));
-            _blockFactory.CreateListCube();
+            _heroFactory.CreateHero(_levelDataProvider.StartPoint);
+            _heroFactory.CreateCrosshair(_levelDataProvider.StartPoint);
         }
     }
 }

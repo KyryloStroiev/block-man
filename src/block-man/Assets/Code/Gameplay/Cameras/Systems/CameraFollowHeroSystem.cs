@@ -20,7 +20,7 @@ namespace Code.Gameplay.Cameras.Systems
         {
             foreach (GameEntity hero in _heroes)
             {
-                _cameraProvider.MainCamera.transform.SetWordXY(hero.WorldPosition.x, hero.WorldPosition.y + hero.CameraOffsetY);
+                _cameraProvider.MainCamera.transform.SetWordXY(0, hero.WorldPosition.y + hero.CameraOffsetY);
             }
         }
     }

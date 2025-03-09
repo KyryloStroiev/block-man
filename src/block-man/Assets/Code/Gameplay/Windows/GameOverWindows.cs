@@ -21,7 +21,7 @@ namespace Code.Gameplay.Windows
         [Inject]
         private void Construct(IWindowService windowService, IGameStateMachine gameStateMachine)
         {
-            Id = WindowsId.GameOverWindow;
+            Id = WindowsId.FinalGameOverWindow;
             _gameStateMachine = gameStateMachine;
             _windowService = windowService;
         }

@@ -1,7 +1,6 @@
 ﻿using Code.Common.Entity;
 using Code.Common.Extensions;
 using Code.Gameplay.StaticData;
-using Code.Gameplay.UI.GameOvers.Config;
 using Code.Infrastructure.Identifiers;
 using UnityEngine;
 
@@ -32,7 +31,15 @@ namespace Code.Gameplay.UI.Factory
                 .AddId(_identifierService.NextId())
                 .AddWorldPosition(at)
                 .AddViewPrefab(_staticDataService.GetUIElementsConfig().FlagPrefab)
-                .With(x => x.isFlagGameOver = true);
+                ;
+        }
+
+        public GameEntity CreateDeathCollider(Vector3 at)
+        {
+            return CreateEntity.Empty()
+                .AddId(_identifierService.NextId())
+                .AddWorldPosition(at)
+                .AddViewPrefab(_staticDataService.GetUIElementsConfig().DeathCollider);
         }
         
       
